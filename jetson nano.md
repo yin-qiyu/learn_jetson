@@ -162,11 +162,35 @@ format=(string)BGRx ! ""videoconvert ! "
 
 
 
+# 基本环境配置
+
+jetson nano是原装了CUDA的，但是需要用户导入环境变量（导入相关的路径）才可以使用，**只有环境变量导入成功后**，方可在命令行使用 nvcc -V
+
+```text
+在命令行输入 sudo vim ~/.bashrc
+```
+
+在最后添加这三行
+
+```bash
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda/bin:$PATH
+```
 
 
 
+```text
+保存后退出，执行 source ~/.bashrc，使得环境变量生效。
+```
 
-# jetson nao配置
+在命令行输入 nvcc -V 如果正常输出，说明CUDA路径配置成功
+
+
+
+# jetson nao其他配置
+
+
 
 ## 1. 更新镜像源
 
@@ -395,8 +419,6 @@ source ~/.bashrc
 
 
 ### 2.3.3 orchvision v0.9.0
-
-
 
 
 
