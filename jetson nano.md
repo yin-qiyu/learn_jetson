@@ -237,7 +237,7 @@ sudo apt-get install python3-pip python3-dev
 ```
 
  ```bash
- sudo apt-get install python3-pip python3-dev
+ sudo apt-get install python-pip python-dev
  ```
 
 
