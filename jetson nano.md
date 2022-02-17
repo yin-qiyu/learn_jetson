@@ -177,7 +177,7 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 ```
 
 ```bash
-vim /etc/apt/sources.list.bak
+sudo vim /etc/apt/sources.list.bak
 ```
 
 ```
