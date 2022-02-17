@@ -184,7 +184,9 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 在命令行输入 nvcc -V 如果正常输出，说明CUDA路径配置成功
 
-![image](jetson nano.assets/image-20220217211834575-5103916.png)
+<img src="jetson nano.assets/image-20220217211834575-5103916.png" alt="image-20220126204757298" style="zoom:50%;" />
+
+
 
 # jetson nao其他配置
 
