@@ -472,7 +472,7 @@ vim /etc/automagic-fan/config.json
 
 - 先查看初试交换分区大小：
 
-<img src="jetson nano.assets/image-20220126210014592.png" alt="image-20220126210014592" style="zoom:50%;" />
+![image-20220217215921770](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215921770.png)
 
 - 生成swapfile文件操作如下
 
@@ -496,7 +496,7 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 
 设置成功后：
 
-![image-20220217215704325](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215704325.png)
+![image-20220217215856117](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215856117.png)
 
 
 
