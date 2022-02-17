@@ -186,7 +186,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 <img src="jetson nano.assets/image-20220217211834575-5103916.png" alt="image-20220126204757298" style="zoom:50%;" />
 
-![image-20220217212219500](jetson nano.assets/image-20220217212219500.png)
+![image-20220217212219500](./jetson nano.assets/image-20220217212219500.png)
 
 # jetson nao其他配置
 
