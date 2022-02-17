@@ -164,6 +164,8 @@ format=(string)BGRx ! ""videoconvert ! "
 
 # 基本环境配置
 
+## 1. 检查nvcc
+
 jetson nano是原装了CUDA的，但是需要用户导入环境变量（导入相关的路径）才可以使用，**只有环境变量导入成功后**，方可在命令行使用 nvcc -V
 
 ```text
@@ -187,6 +189,114 @@ export PATH=/usr/local/cuda/bin:$PATH
 <img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215136645.png" alt="image-20220217215136645" style="zoom:50%;" />
 
 
+
+## 2. 安装torch和vision
+
+安装pytorch，首先CUDA的步骤得过一下可以看到nvcc -V
+
+安装pytorch跟CUDA的版本要对应
+
+![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578491714111.png) 
+
+网上找了个1.6.0的安装包通过winscp上传到jetson后离线安装下，该离线包可以到资料5、常用库和模型中获取
+
+sudo pip3 install torch-1.6.0a0+b31f58d-cp36-cp36m-linux_aarch64.whl
+
+sudo pip3 install torchvision
+
+sudo pip install boto3
+
+ 
+
+终端输入python3进入到python3的运行环境中测试下，import torch，我遇到的报错是ImportError:libopenblas.so.0:无法打开共享对象文件或目录，看了下这个教程:https://www.cnpython.com/qa/77454
+
+尝试安装了OpenBlas系统库问题解决了
+
+sudo apt-get install libopenblas-dev
+
+到python环境中
+
+import torch
+
+print(torch.__version__)
+
+查看安装的版本
+
+![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578495157104.png) 
+
+接下来继续在python3环境中测试下pytorch的功能
+
+**from** __future__ **import** print_function
+
+**import** torch
+
+x **=** torch**.**rand(5, 3)
+
+**print**(x)
+
+输出
+
+tensor([[0.3380, 0.3845, 0.3217],
+
+​    [0.8337, 0.9050, 0.2650],
+
+​    [0.2979, 0.7141, 0.9069],
+
+​    [0.1449, 0.1132, 0.1375],
+
+​    [0.4675, 0.3947, 0.1426]])
+
+另外，要检查你的GPU驱动程序和CUDA是否启用，并通过PyTorch访问，运行以下命令返回是否启用CUDA驱动程序
+
+**import** torch
+
+torch**.**cuda**.**is_available()
+
+ 
+
+ 
+
+测试完毕后接下来再安装torchvision,根官网介绍,pytorch1.6吻合的torch版本为0.7.0
+
+ 
+
+![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578500873077.png) 
+
+ 
+
+sudo apt-get install libjpeg-dev zlib1g-dev
+
+git clone --branch v0.7.0 https://github.com/pytorch/vision torchvision
+
+cd torchvision
+
+export BUILD_VERSION=0.7.0
+
+sudo python3 setup.py install
+
+注意:安装可能会确实一些文件，这个可以安装相应的文件来解决，例如笔者遇到的是确实一下三个文件所以按了一下三个包
+
+![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578504683380.png) 
+
+sudo apt install libavcodec-dev
+
+sudo apt install libavformat-dev
+
+sudo apt install libswscale-dev
+
+重新sudo python3 setup.py install
+
+ 
+
+ 
+
+到python环境中输入下代码可以查看版本是否对应
+
+import torchvision
+
+print(torchvision.__version__)
+
+![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578510963684.png) 
 
 
 
