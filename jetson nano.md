@@ -375,7 +375,7 @@ conda remove -n rcnn --all
 
 激活成功会换名字
 
-<img src="jetson nano.assets/image-20220126204757298.png" alt="image-20220126204757298" style="zoom:50%;" />
+![image-20220217215642515](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215642515.png)
 
 
 
@@ -496,7 +496,7 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 
 设置成功后：
 
-<img src="jetson nano.assets/image-20220126210159957.png" alt="image-20220126210159957" style="zoom:50%;" />
+![image-20220217215704325](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215704325.png)
 
 
 
