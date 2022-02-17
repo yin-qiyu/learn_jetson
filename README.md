@@ -11,6 +11,12 @@
 
 <!-- PROJECT LOGO -->
 <br />
+<div align="center">
+<!--   <a href="https://github.com/hominsu/TensorRt-Yolov5-JetsonNano">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a> -->
+
+  <h3 align="center">TensorRt-Yolov5-JetsonNano</h3>
 
 这是我自学jetson nano的一些笔记
 
