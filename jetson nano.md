@@ -73,9 +73,23 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 
 
+## 查看自带摄像头
+
+```bash
+ls /dev/video*
+```
 
 
 
+
+
+
+
+
+
+命令行清空指令
+
+control+l
 
 git clone https://github.com/dusty-nv/jetson-inference
 git clone https://gitee.com/vcan123/jetson-inference
@@ -828,5 +842,7 @@ sudo python3 setup.py install
 
 
 
-## 9
+## 9. yolo
+
+![image-20220217162717675](jetson nano.assets/image-20220217162717675-5086440.png)
 
