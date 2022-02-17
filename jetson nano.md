@@ -29,9 +29,9 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 
 
-<img src="jetson nano.assets/v2-547637924ebc45f6d73726edc25aca02_1440w.png" alt="image-20220126204757298" style="zoom:50%;" />
+![image-20220217215258396](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215258396.png)
 
-Image
+
 
 
 
@@ -45,7 +45,7 @@ Image
 
 
 
-<img src="jetson nano.assets/v2-349c9892036be7a824e28a05342bba43_1440w.png" alt="image-20220126204757298" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215315660.png" alt="image-20220217215315660" style="zoom:50%;" />
 
 
 
@@ -61,7 +61,7 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 测试一下：
 
-<img src="jetson nano.assets/v2-cc119e142435382fe68e2179437d5a14_1440w.png" alt="image-20220126204757298" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215329779.png" alt="image-20220217215329779" style="zoom:50%;" />
 
 
 
