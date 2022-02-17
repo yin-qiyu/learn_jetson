@@ -178,15 +178,13 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda/bin:$PATH
 ```
 
-
-
-```text
+```bash
 保存后退出，执行 source ~/.bashrc，使得环境变量生效。
 ```
 
 在命令行输入 nvcc -V 如果正常输出，说明CUDA路径配置成功
 
-
+![image-20220217211217016](jetson nano.assets/image-20220217211217016.png)
 
 # jetson nao其他配置
 
