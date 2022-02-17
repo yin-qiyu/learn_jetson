@@ -89,7 +89,7 @@ ls /dev/video*
 
 命令行清空指令
 
-control+l
+​	control+l
 
 git clone https://github.com/dusty-nv/jetson-inference
 git clone https://gitee.com/vcan123/jetson-inference
@@ -844,5 +844,63 @@ sudo python3 setup.py install
 
 ## 9. yolo
 
-![image-20220217162717675](jetson nano.assets/image-20220217162717675-5086440.png)
+<img src="jetson nano.assets/image-20220217162717675.png" alt="image-20220217162717675" style="zoom:50%;" />
+
+
+
+原版：
+
+./darknet detector demo ok/new.data ok/yolov4-tiny-new.cfg ok/yolov4-tiny-new_last.weights "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink"
+
+
+
+口罩
+
+./darknet detector demo cfg/obj.data cfg/yolov4-tiny-masks.cfg yolov4-tiny-obj_last.weights "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink"
+
+
+
+yolo:
+
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink"
+
+
+
+````bash
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
+sudo apt-get update
+sudo apt-get install gstreamer1.0-tools gstreamer1.0-alsa gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav
+sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev libgstreamer-plugins-bad1.0-dev 
+````
+
+```bash
+官方：
+./darknet detector demo ok/new.data ok/yolov4-tiny-new.cfg ok/yolov4-tiny-new_last.weights "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink"
+
+// 仅适用于jetson-nano运行yolov3-tiny demo。注意请在darknet的文档页下打开terminal输入
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink"
+
+
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink"
+
+
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
