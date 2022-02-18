@@ -750,7 +750,7 @@ sudo make		#编译大约7分钟
 ../bin/sample_mnist
 ```
 
-<img src="/Users/yinqiyu/Documents/typora/learn_jetson/jetson%20nano.assets/image-20220127160142123.png" alt="image-20220127160142123" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220127160142123.png" style="zoom: 25%;" />
 
 
 
@@ -1084,7 +1084,17 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgst
 
 
 
+```bash
+# 图片检测
+./darknet detect cfg/yolov4.cfg yolov4.weights data/dog.jpg
+```
 
+
+
+```bash
+# 视频检测
+./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights
+```
 
 
 
