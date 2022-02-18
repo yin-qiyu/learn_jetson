@@ -7,7 +7,7 @@
 
 # 问题（未完成）
 
-## jupyter import torch 报错
+## 1. jupyter import torch 报错
 
 ```bash
 OSError:/usr/lib/aarch64-linux-gnu/libgomp.so.1: cannot allocate memory in static TLS block
@@ -73,13 +73,34 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 
 
-## 查看自带摄像头
+## 2. 查看自带摄像头
 
 ```bash
 ls /dev/video*
 ```
 
 
+
+## 3. Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-*解决办法
+
+我在使用pip3 install paramiko 的时候，出现了报错
+
+```bash
+...
+        raise DistutilsError("Setup script exited with %s" % (v.args[0],))
+    distutils.errors.DistutilsError: Setup script exited with error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+    
+    ----------------------------------------
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-23ykqx51/pynacl/ 
+```
+
+百度了好久也试了前人的很多方法，最后终于找到了答案。
+
+```bash
+pip3 install --upgrade pip
+```
+
+然后再执行pip3 install paramiko，然没有报错安装成功了 。
 
 
 
@@ -462,7 +483,7 @@ conda config --set show_channel_urls yes
 
 ### 2.3.1 安装新的虚拟环境
 
-这是在minigorge上安装的pytorch，若不想在虚拟环境上安装。可以参考[PyTorch for Jetson - version 1.10 now available - Jetson & Embedded Systems / Jetson Nano - NVIDIA Developer Forums](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048)
+- 这是在minigorge上安装的pytorch，若不想在虚拟环境上安装。可以参考[PyTorch for Jetson - version 1.10 now available - Jetson & Embedded Systems / Jetson Nano - NVIDIA Developer Forums](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048)
 
 ```      bash
 conda create -n pytorch python=3.6	#创建环境
@@ -476,7 +497,9 @@ conda activate pytorch							#激活环境
 
 ```bash
 conda deactivate										#退出环境
-conda remove -n rcnn --all
+conda remove -n pytorch --all
+
+conda info -e												#查看已有环境
 ```
 
 
@@ -536,7 +559,7 @@ source ~/.bashrc
 
 
 
-## 3. 查看jetson信息
+## 3. 查看jetson信息 jtop
 
 sudo pip3 install jetson-stats
 
@@ -594,7 +617,6 @@ sudo chmod 600 /var/swapfile
 #3）建立交换分区
 sudo mkswap /var/swapfile
 #4）启用交换分区
-sudo swapon /var/swapfile
 
 ```
 
