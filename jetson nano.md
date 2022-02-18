@@ -657,7 +657,7 @@ sudo gedit /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 
 ```
 
-![img](jetson nano.assets/2020110210403424.png)
+![2020110210403424](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/2020110210403424.png)
 
 - 编译文件
 
@@ -667,7 +667,7 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 
 完成以上步骤，正常来说就可以打开桌面共享的图标了。
 
-![img](jetson nano.assets/2020110210403423-20220127151357890.png)
+![2020110210403423-20220127151357890](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/2020110210403423-20220127151357890.png)
 
 设置好后（不设置也可以）
 
@@ -750,11 +750,11 @@ sudo make		#编译大约7分钟
 ../bin/sample_mnist
 ```
 
-<img src="jetson nano.assets/image-20220127160142123.png" alt="image-20220127160142123" style="zoom:20%;" />
-
-<img src="jetson nano.assets/image-20220127160201547.png" alt="image-20220127160201547" style="zoom:20%;" />
+<img src="/Users/yinqiyu/Documents/typora/learn_jetson/jetson%20nano.assets/image-20220127160142123.png" alt="image-20220127160142123" style="zoom:33%;" />
 
 
+
+<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220127160201547.png" alt="image-20220127160201547" style="zoom:25%;" />
 
 ### 7.3 jetson inference库安装
 
@@ -1012,7 +1012,7 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgst
 
 
 
-# 配置GStreamer管道
+## 配置GStreamer管道
 
 首先说一下思路：由于yolov3本身不支持csi摄像头，因此需要通过GStreamer来对csi摄像头获取的视频进行预处理，然后提交给yolov3进行识别判定，而这一过程重点就是GStreamer管道的配置，以下是博主的管道配置
 
@@ -1074,11 +1074,13 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgst
 
 
 
+## darknet框架
+
+<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220218194313599.png" alt="image-20220218194313599" style="zoom:50%;" />
 
 
 
-
-
+![image-20220218194238951](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220218194238951.png)
 
 
 

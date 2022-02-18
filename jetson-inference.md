@@ -30,7 +30,7 @@ docker rmi $(docker images -q)
 
 **3、当要删除的iamges和其他的镜像有关联而无法删除时**
 
-<img src="jetson-inference.assets/image-20220216164023434.png" alt="image-20220216164023434" style="zoom:50%;" />
+![image-20220216164023434](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220216164023434.png)
 
 可通过 -f 参数强制删除
 
