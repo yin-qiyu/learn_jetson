@@ -28,7 +28,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 
 
-![image-20220217215258396](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215258396.png)
+![image-20220219230710940](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220219230710940.png)
 
 
 
@@ -1102,6 +1102,4 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgst
 # 视频检测
 ./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights
 ```
-
-
 
