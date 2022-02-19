@@ -78,7 +78,11 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 ls /dev/video*
 ```
 
+```ba
+nvgstcapture-1.0
+```
 
+ 
 
 ## 3. Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-*解决办法
 
