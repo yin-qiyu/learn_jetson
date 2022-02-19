@@ -4,7 +4,6 @@
 
 
 
-
 # 问题（未完成）
 
 ## 1. jupyter import torch 报错
@@ -570,6 +569,10 @@ Sudo jtop
 ## 4. 风扇自动控制
 
 网址：[jetson-fan-ctl: Automagic fan control for the Nvidia Jetson Nano (gitee.com)](https://gitee.com/xiao_yin666/jetson-fan-ctl)
+
+```bash
+git clone https://gitee.com/xiao_yin666/jetson-fan-ctl.git
+```
 
 进入文件夹
 
