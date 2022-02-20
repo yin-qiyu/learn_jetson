@@ -20,7 +20,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 根据中外网友的反映，方案1，2都可能有效，但在笔者的测试过程中，只有方案2有效，且每次启动jupyter前都要运行一遍，十分的麻烦。但好在笔者注意到了官方人员的一个回复：
 
-![image-20220220123246942](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220123246942.png)
+![image-20220220123246942](https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220123246942.png)
 
 
 
