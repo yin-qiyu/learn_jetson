@@ -64,19 +64,9 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 
 
-## 2. 查看自带摄像头
-
-```bash
-ls /dev/video*
-```
-
-```ba
-nvgstcapture-1.0
-```
-
  
 
-## 3. Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-*解决办法
+## 2. Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-*解决办法
 
 我在使用pip3 install paramiko 的时候，出现了报错
 
