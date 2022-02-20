@@ -682,11 +682,11 @@ sudo make		#编译大约7分钟
 ../bin/sample_mnist
 ```
 
-<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220127160142123.png" style="zoom: 25%;" />
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124556084.png" alt="image-20220220124556084" style="zoom:25%;" />
 
 
 
-<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220127160201547.png" alt="image-20220127160201547" style="zoom:25%;" />
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124606809.png" alt="image-20220220124606809" style="zoom: 50%;" />
 
 ### 7.3 jetson inference库安装
 
@@ -1008,11 +1008,11 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgst
 
 ## darknet框架
 
-<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220218194313599.png" alt="image-20220218194313599" style="zoom:50%;" />
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124629027.png" alt="image-20220220124629027" style="zoom:50%;" />
 
 
 
-![image-20220218194238951](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220218194238951.png)
+![image-20220220124638393](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124638393.png)
 
 
 
