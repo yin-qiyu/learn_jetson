@@ -266,7 +266,7 @@ sudo apt-get update
 
 ## 2. miniforge包管理(选)
 
-### 2.1 miniforge简介
+### 2.1 [miniforge简介](https://github.com/conda-forge/miniforge/releases)
 
 conda是一个开源的包、环境管理器，可以用于在同一个机器上安装不同版本的软件包及其依赖，并能够在不同的环境之间切换。搞深度学习的应该都十分熟悉anaconda，但是NVIDIA Jetson Xavier NX是**arm**架构的，anaconda及其精简版miniconda并不支持arm64架构。现在主流的CPU架构分为Intel的x86/x64架构和ARM的ARM/ARM64两种，平常用的电脑大部分都是x86/x64的（苹果除外），Xavier使用的是ARM64，所以很多在x86/x64上能用的的东西到了它这里就不能用了。**这一点请谨记，如果你在Jetson上遇到什么奇奇怪怪的例如“No such file or directory”之类的问题，第一时间要考虑是不是版本不是ARM64的版本**。
 在ARM64上的anaconda替代品是miniforge，miniforge与miniconda的区别在于miniforge的下载通道是conda-forge，其他基本没什么不同。
@@ -274,8 +274,6 @@ conda是一个开源的包、环境管理器，可以用于在同一个机器上
 
 
 ### 2.2 安装miniforge
-
-官网：https://github.com/conda-forge/miniforge/releases
 
 1. 我下载的是 `Miniforge-pypy3-4.11.0-0-Linux-aarch64.sh`,,代表适用于arrch64架构下的Linux系统。（ARM64对应32位和64位分为arrch32和arrch64）
 
@@ -398,12 +396,10 @@ Sudo jtop
 
 
 
-## 4. 风扇自动控制
-
-网址：[jetson-fan-ctl: Automagic fan control for the Nvidia Jetson Nano (gitee.com)](https://gitee.com/xiao_yin666/jetson-fan-ctl)
+## 4. [风扇自动控制](https://github.com/Pyrestone/jetson-fan-ctl.git)
 
 ```bash
-git clone https://gitee.com/xiao_yin666/jetson-fan-ctl.git
+git clone https://github.com/Pyrestone/jetson-fan-ctl.git
 ```
 
 进入文件夹
@@ -595,7 +591,7 @@ sudo make		#编译大约7分钟
 
 
 
-教程:[jetson-inference AI学习库在jetson nano上安装【学习笔记】 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv13998685)
+[ 参考资料 ](https://www.bilibili.com/read/cv13998685) 
 
 ``` bash
 sudo apt update
@@ -668,7 +664,7 @@ cmake ../
 
 模型包安装
 
- 此步为安装模型包，本人建议【全部取消】，不然会有些慢，之后我们可以去https://github.com/dusty-nv/jetson-inference/releases  手动下载。
+ 此步为安装模型包，本人建议【全部取消】，不然会有些慢，之后我们可以去[官网](https://github.com/dusty-nv/jetson-inference/releases)手动下载。
 
 我们继续：
 
