@@ -38,7 +38,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 在命令行输入 nvcc -V 如果正常输出，说明CUDA路径配置成功
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124026557.png" alt="image-20220220124026557" style="zoom:50%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124026557.png" alt="image-20220220124026557" style="zoom:50%;" />
 
 
 
@@ -48,7 +48,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 安装pytorch跟CUDA的版本要对应
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124050272.png" alt="image-20220220124050272" style="zoom:50%;" /> 
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124050272.png" alt="image-20220220124050272" style="zoom:50%;" /> 
 
 网上找了个1.6.0的安装包通过winscp上传到jetson后离线安装下，该离线包可以到资料5、常用库和模型中获取
 
@@ -74,7 +74,7 @@ print(torch.__version__)
 
 查看安装的版本
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124109038.png" alt="image-20220220124109038" style="zoom:50%;" /> 
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124109038.png" alt="image-20220220124109038" style="zoom:50%;" /> 
 
 接下来继续在python3环境中测试下pytorch的功能
 
@@ -112,7 +112,7 @@ torch**.**cuda**.**is_available()
 
  
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124126049.png" alt="image-20220220124126049" style="zoom:50%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124126049.png" alt="image-20220220124126049" style="zoom:50%;" />
 
  
 
@@ -128,7 +128,7 @@ sudo python3 setup.py install
 
 注意:安装可能会确实一些文件，这个可以安装相应的文件来解决，例如笔者遇到的是确实一下三个文件所以按了一下三个包
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124141507.png" alt="image-20220220124141507" style="zoom:50%;" /> 
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124141507.png" alt="image-20220220124141507" style="zoom:50%;" /> 
 
 sudo apt install libavcodec-dev
 
@@ -148,7 +148,7 @@ import torchvision
 
 print(torchvision.__version__)
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124154935.png" alt="image-20220220124154935" style="zoom:50%;" /> 
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124154935.png" alt="image-20220220124154935" style="zoom:50%;" /> 
 
 
 
@@ -337,7 +337,7 @@ conda info -e												#查看已有环境
 
 激活成功会换名字
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124211038.png" alt="image-20220220124211038" style="zoom:50%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124211038.png" alt="image-20220220124211038" style="zoom:50%;" />
 
 
 
@@ -436,7 +436,7 @@ vim /etc/automagic-fan/config.json
 
 - 先查看初试交换分区大小：
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124253404.png" alt="image-20220220124253404" style="zoom: 33%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124253404.png" alt="image-20220220124253404" style="zoom: 33%;" />
 
 - 生成swapfile文件操作如下
 
@@ -459,7 +459,7 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 
 设置成功后：
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124345832.png" alt="image-20220220124345832" style="zoom:33%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124345832.png" alt="image-20220220124345832" style="zoom:33%;" />
 
 
 
@@ -488,7 +488,7 @@ sudo gedit /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 
 ```
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124406016.png" alt="image-20220220124406016" style="zoom: 50%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124406016.png" alt="image-20220220124406016" style="zoom: 50%;" />
 
 - 编译文件
 
@@ -498,7 +498,7 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 
 完成以上步骤，正常来说就可以打开桌面共享的图标了。
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124426118.png" alt="image-20220220124426118" style="zoom:50%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124426118.png" alt="image-20220220124426118" style="zoom:50%;" />
 
 设置好后（不设置也可以）
 
@@ -581,11 +581,11 @@ sudo make		#编译大约7分钟
 ../bin/sample_mnist
 ```
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124556084.png" alt="image-20220220124556084" style="zoom:25%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124556084.png" alt="image-20220220124556084" style="zoom:25%;" />
 
 
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124606809.png" alt="image-20220220124606809" style="zoom: 50%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124606809.png" alt="image-20220220124606809" style="zoom: 50%;" />
 
 ### 7.3 jetson inference库安装
 
@@ -907,11 +907,11 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgst
 
 ## darknet框架
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124629027.png" alt="image-20220220124629027" style="zoom:50%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124629027.png" alt="image-20220220124629027" style="zoom:50%;" />
 
 
 
-![image-20220220124638393](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124638393.png)
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124638393.png" alt="image-20220220124638393" style="zoom: 33%;" />
 
 
 

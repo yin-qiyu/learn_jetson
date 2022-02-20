@@ -36,7 +36,7 @@ docker rmi $(docker images -q)
 
 **3、当要删除的iamges和其他的镜像有关联而无法删除时**
 
-![image-20220220133858146](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220133858146.png)
+![image-20220220133858146](https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220133858146.png)
 
 可通过 -f 参数强制删除
 
