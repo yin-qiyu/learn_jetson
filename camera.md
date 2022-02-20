@@ -4,5 +4,4 @@ jetson只支持带索尼IMX219传感器的摄像头
 
 <img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220192049253.png" alt="image-20220220192049253" style="zoom: 33%;" />
 
-![image-20220220202039412](https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220202039412.png)
-
+<img src="https://www.yahboom.com/Public/ueditor/php/upload/image/20191113/1573630161119529.png" alt="image.png" style="zoom:50%;" />
