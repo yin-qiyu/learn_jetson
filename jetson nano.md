@@ -26,9 +26,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 根据中外网友的反映，方案1，2都可能有效，但在笔者的测试过程中，只有方案2有效，且每次启动jupyter前都要运行一遍，十分的麻烦。但好在笔者注意到了官方人员的一个回复：
 
-
-
-![image-20220219230710940](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220219230710940.png)
+![image-20220220123246942](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220123246942.png)
 
 
 
@@ -44,7 +42,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 
 
-<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215315660.png" alt="image-20220217215315660" style="zoom:50%;" />
+![image-20220220123743262](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220123743262.png)
 
 
 
@@ -60,7 +58,7 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 测试一下：
 
-<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215329779.png" alt="image-20220217215329779" style="zoom:50%;" />
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220123845303.png" alt="image-20220220123845303" style="zoom:50%;" />
 
 
 
@@ -111,79 +109,6 @@ pip3 install --upgrade pip
 
 
 
-命令行清空指令
-
-​	control+l
-
-git clone https://github.com/dusty-nv/jetson-inference
-git clone https://gitee.com/vcan123/jetson-inference
-
-cd jetson-inference
-
-git submodule update --init
-
-
-
-查看摄像头
-
-```bash
-ls /dev/video*
-```
-
-
-
-
-
-安装pip
-
-```
-pip3 install --upgrade pip
-```
-
-安装jupyter
-
-sudo pip3 install jupyter jupyterlab
-
-sudo n stable
-
-
-
-
-
-yolo
-
-<img src="jetson nano.assets/image-20220124223907458.png" alt="image-20220126204757298" style="zoom:50%;" />
-
-<img src="jetson nano.assets/image-20220124224114031.png" alt="image-20220126204757298" style="zoom:50%;" />
-
-
-
-
-
-<img src="jetson nano.assets/image-20220124224647808.png" alt="image-20220126204757298" style="zoom:50%;" />
-
-
-
-
-
-
-
-``` 
-cap=cv2. VideoCapture(gstreamer_ pipeline(flip_ method=0) , cv2. CAP_ GSTREAMER)
-```
-
-```
-def
-gstreamer_ pipeline( capture_ _width=1280, capture_ height=720 , display_ _width=1280 , display_ height=720 ,framerate=60, flip_ method=0,):
-return ("nvarguscamerasrc ! ""video/x-raw(memory :NVMM), ""width=(int )%d, height=(int)%d, ""format=(string)NV12, framerate=(fraction)%d/1 !"
-'nvvidconv flip-method=%d ! ""video/x-raw, width=(int)%d, height=(int)%d ,
-format=(string)BGRx ! ""videoconvert ! "
-"video/x-raw, format=(string)BGR ! appsink"%
-(capture_ _width ,capture_ height ,framerate, flip_ _method ,display_ width, display_ height, ))
-```
-
-
-
 
 
 # 基本环境配置
@@ -210,7 +135,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 在命令行输入 nvcc -V 如果正常输出，说明CUDA路径配置成功
 
-<img src="https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215136645.png" alt="image-20220217215136645" style="zoom:50%;" />
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124026557.png" alt="image-20220220124026557" style="zoom:50%;" />
 
 
 
@@ -220,7 +145,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 安装pytorch跟CUDA的版本要对应
 
-![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578491714111.png) 
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124050272.png" alt="image-20220220124050272" style="zoom:50%;" /> 
 
 网上找了个1.6.0的安装包通过winscp上传到jetson后离线安装下，该离线包可以到资料5、常用库和模型中获取
 
@@ -246,7 +171,7 @@ print(torch.__version__)
 
 查看安装的版本
 
-![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578495157104.png) 
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124109038.png" alt="image-20220220124109038" style="zoom:50%;" /> 
 
 接下来继续在python3环境中测试下pytorch的功能
 
@@ -284,7 +209,7 @@ torch**.**cuda**.**is_available()
 
  
 
-![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578500873077.png) 
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124126049.png" alt="image-20220220124126049" style="zoom:50%;" />
 
  
 
@@ -300,7 +225,7 @@ sudo python3 setup.py install
 
 注意:安装可能会确实一些文件，这个可以安装相应的文件来解决，例如笔者遇到的是确实一下三个文件所以按了一下三个包
 
-![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578504683380.png) 
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124141507.png" alt="image-20220220124141507" style="zoom:50%;" /> 
 
 sudo apt install libavcodec-dev
 
@@ -320,7 +245,7 @@ import torchvision
 
 print(torchvision.__version__)
 
-![image.png](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/1604578510963684.png) 
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124154935.png" alt="image-20220220124154935" style="zoom:50%;" /> 
 
 
 
@@ -511,7 +436,7 @@ conda info -e												#查看已有环境
 
 激活成功会换名字
 
-![image-20220217215642515](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215642515.png)
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124211038.png" alt="image-20220220124211038" style="zoom:50%;" />
 
 
 
@@ -612,7 +537,7 @@ vim /etc/automagic-fan/config.json
 
 - 先查看初试交换分区大小：
 
-![image-20220217215921770](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215921770.png)
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124253404.png" alt="image-20220220124253404" style="zoom: 33%;" />
 
 - 生成swapfile文件操作如下
 
@@ -635,7 +560,7 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 
 设置成功后：
 
-![image-20220217215856117](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/image-20220217215856117.png)
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124345832.png" alt="image-20220220124345832" style="zoom:33%;" />
 
 
 
@@ -664,7 +589,7 @@ sudo gedit /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 
 ```
 
-![2020110210403424](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/2020110210403424.png)
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124406016.png" alt="image-20220220124406016" style="zoom: 50%;" />
 
 - 编译文件
 
@@ -674,7 +599,7 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 
 完成以上步骤，正常来说就可以打开桌面共享的图标了。
 
-![2020110210403423-20220127151357890](https://raw.githubusercontent.com/yinqiyu/picbed/master/img/2020110210403423-20220127151357890.png)
+<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220124426118.png" alt="image-20220220124426118" style="zoom:50%;" />
 
 设置好后（不设置也可以）
 
