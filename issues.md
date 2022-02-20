@@ -36,7 +36,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 
 
-![image-20220220123743262](https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220123743262.png)
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220123743262.png" alt="image-20220220123743262" style="zoom:50%;" />
 
 
 
@@ -52,7 +52,7 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 测试一下：
 
-<img src="https://gitee.com/xiao_yin666/picbed/raw/master/img/image-20220220123845303.png" alt="image-20220220123845303" style="zoom:50%;" />
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220123845303.png" alt="image-20220220123845303" style="zoom:50%;" />
 
 
 
