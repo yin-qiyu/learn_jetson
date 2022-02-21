@@ -20,8 +20,8 @@
 
 jetson nano是原装了CUDA的，但是需要用户导入环境变量（导入相关的路径）才可以使用，**只有环境变量导入成功后**，方可在命令行使用 nvcc -V
 
-```text
-在命令行输入 sudo vim ~/.bashrc
+```bash
+sudo vim ~/.bashrc
 ```
 
 在最后添加这三行
@@ -571,7 +571,7 @@ TensorRT是英伟达针对自家平台做的加速包，TensorRT主要做了这�
 1. TensorRT支持INT8和FP16的计算。深度学习网络在训练时，通常使用 32 位或 16 位数据。TensorRT则在网络的推理时选用不这么高的精度，达到加速推断的目的。
 2. TensorRT对于网络结构进行了重构，把一些能够合并的运算合并在了一起，针对GPU的特性做了优化。现在大多数深度学习框架是没有针对GPU做过性能优化的，而英伟达，GPU的生产者和搬运工，自然就推出了针对自己GPU的加速工具TensorRT。一个深度学习模型，在没有优化的情况下，比如一个卷积层、一个偏置层和一个reload层，这三层是需要调用三次cuDNN对应的API，但实际上这三层的实现完全是可以合并到一起的，TensorRT会对一些可以合并网络进行合并。
 
-
+<img src="https://developer.nvidia.com/sites/default/files/akamai/deeplearning/tensorrt/trt-info.png" alt="img" style="zoom:50%;" />
 
 ### 7.2 检查自带TensorRT环境
 
@@ -588,8 +588,6 @@ sudo make		#编译大约7分钟
 <img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124606809.png" alt="image-20220220124606809" style="zoom: 50%;" />
 
 ### 7.3 jetson inference库安装
-
-
 
 [ 参考资料 ](https://www.bilibili.com/read/cv13998685) 
 

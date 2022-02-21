@@ -1,6 +1,4 @@
-# 问题（未完成）
-
-## 1. jupyter import torch 报错
+# 1. jupyter import torch 报错
 
 ```bash
 OSError:/usr/lib/aarch64-linux-gnu/libgomp.so.1: cannot allocate memory in static TLS block
@@ -86,3 +84,18 @@ pip3 install --upgrade pip
 ```
 
 然后再执行pip3 install paramiko，然没有报错安装成功了 。
+
+
+
+# 2. sd卡烧录太慢
+
+换一个好一点的读卡器速度就起来了
+
+
+
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220221175152039.png" alt="image-20220221175152039" style="zoom: 33%;" />
+
+
+
+
+

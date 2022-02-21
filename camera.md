@@ -16,3 +16,5 @@ ls /dev/video*
 nvgstcapture-1.0
 ```
 
+
+
