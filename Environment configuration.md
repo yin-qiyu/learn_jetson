@@ -40,7 +40,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 在命令行输入 nvcc -V 如果正常输出，说明CUDA路径配置成功
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141141880.png" alt="image-20220222141141880" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141141880.png" alt="image-20220222141141880" style="zoom:50%;" width="1000"/>
 
 
 
@@ -50,7 +50,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 安装pytorch跟CUDA的版本要对应
 
-<img src="https://img2020.cnblogs.com/blog/1733978/202104/1733978-20210414172645876-1962676.png" alt="img" style="zoom: 67%;" /> 
+<img src="https://img2020.cnblogs.com/blog/1733978/202104/1733978-20210414172645876-1962676.png" alt="img" style="zoom: 67%;" width="1000"/> 
 
 网上找了个1.6.0的安装包通过winscp上传到jetson后离线安装下，该离线包可以到资料5、常用库和模型中获取
 
@@ -76,7 +76,7 @@ print(torch.__version__)
 
 查看安装的版本
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141236206.png" alt="image-20220222141236206" style="zoom:50%;" /> 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141236206.png" alt="image-20220222141236206" width="500" /> 
 
 接下来继续在python3环境中测试下pytorch的功能
 
@@ -114,7 +114,7 @@ torch**.**cuda**.**is_available()
 
  
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141251282.png" alt="image-20220222141251282" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141251282.png" alt="image-20220222141251282" width="500" style="zoom:50%;" />
 
  
 
@@ -130,7 +130,7 @@ sudo python3 setup.py install
 
 注意:安装可能会确实一些文件，这个可以安装相应的文件来解决，例如笔者遇到的是确实一下三个文件所以按了一下三个包
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141306843.png" alt="image-20220222141306843" style="zoom:50%;" /> 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141306843.png" alt="image-20220222141306843" width="1000" style="zoom:50%;" /> 
 
 sudo apt install libavcodec-dev
 
@@ -150,7 +150,7 @@ import torchvision
 
 print(torchvision.__version__)
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141316874.png" alt="image-20220222141316874" style="zoom:50%;" /> 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141316874.png" alt="image-20220222141316874" width="500" style="zoom:50%;" /> 
 
 
 
@@ -339,7 +339,7 @@ conda info -e												#查看已有环境
 
 激活成功会换名字
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141336662.png" alt="image-20220222141336662" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141336662.png" alt="image-20220222141336662" width="1000" style="zoom:50%;" />
 
 
 
@@ -438,7 +438,7 @@ vim /etc/automagic-fan/config.json
 
 - 先查看初试交换分区大小：
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141405289.png" alt="image-20220222141405289" style="zoom: 25%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141405289.png" alt="image-20220222141405289" width="800" />
 
 - 生成swapfile文件操作如下
 
@@ -461,7 +461,7 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 
 设置成功后：
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141420401.png" alt="image-20220222141420401" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141420401.png" alt="image-20220222141420401" width="1000" />
 
 
 
@@ -490,7 +490,7 @@ sudo gedit /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141438235.png" alt="image-20220222141438235" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141438235.png" alt="image-20220222141438235" width="800" />
 
 - 编译文件
 
@@ -500,7 +500,7 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 
 完成以上步骤，正常来说就可以打开桌面共享的图标了。
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141452790.png" alt="image-20220222141452790" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141452790.png" alt="image-20220222141452790" width="500" />
 
 设置好后（不设置也可以）
 
@@ -583,11 +583,11 @@ sudo make		#编译大约7分钟
 ../bin/sample_mnist
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141611316.png" alt="image-20220222141611316" style="zoom:25%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141611316.png" alt="image-20220222141611316" width="300" />
 
 
 
-![image-20220222141633759](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141633759.png)
+<img src="/Users/yinqiyu/Library/Application%20Support/typora-user-images/image-20220222143546381.png" alt="image-20220222143546381" width="300" />
 
 ### 7.3 jetson inference库安装
 
@@ -827,9 +827,9 @@ sudo python3 setup.py install
 
 ## 9. darknet框架
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141647174.png" alt="image-20220222141647174" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141647174.png" alt="image-20220222141647174" width="300" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141654527.png" alt="image-20220222141654527" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141654527.png" alt="image-20220222141654527" width="500" />
 
 
 
