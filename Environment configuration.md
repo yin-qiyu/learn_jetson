@@ -583,11 +583,11 @@ sudo make		#编译大约7分钟
 ../bin/sample_mnist
 ```
 
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124556084.png" alt="image-20220220124556084" style="zoom:25%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141611316.png" alt="image-20220222141611316" style="zoom:25%;" />
 
 
 
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124606809.png" alt="image-20220220124606809" style="zoom: 50%;" />
+![image-20220222141633759](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141633759.png)
 
 ### 7.3 jetson inference库安装
 
@@ -827,9 +827,9 @@ sudo python3 setup.py install
 
 ## 9. darknet框架
 
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124629027.png" alt="image-20220220124629027" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141647174.png" alt="image-20220222141647174" style="zoom:50%;" />
 
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124638393.png" alt="image-20220220124638393" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141654527.png" alt="image-20220222141654527" style="zoom:50%;" />
 
 
 

@@ -18,7 +18,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 根据中外网友的反映，方案1，2都可能有效，但在笔者的测试过程中，只有方案2有效，且每次启动jupyter前都要运行一遍，十分的麻烦。但好在笔者注意到了官方人员的一个回复：
 
-![image-20220220123246942](https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220123246942.png)
+![image-20220222141839089](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141839089.png)
 
 
 
@@ -34,7 +34,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 
 
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220123743262.png" alt="image-20220220123743262" style="zoom:50%;" />
+![image-20220222141848364](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141848364.png)
 
 
 
@@ -50,7 +50,7 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 测试一下：
 
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220123845303.png" alt="image-20220220123845303" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141854183.png" alt="image-20220222141854183" style="zoom:50%;" />
 
 
 
@@ -93,7 +93,7 @@ pip3 install --upgrade pip
 
 
 
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220221175152039.png" alt="image-20220221175152039" style="zoom: 33%;" />
+![image-20220222141902969](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141902969.png)
 
 
 
