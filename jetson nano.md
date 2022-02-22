@@ -401,7 +401,7 @@ Sudo jtop
 ## 4. [风扇自动控制](https://github.com/Pyrestone/jetson-fan-ctl.git)
 
 ```bash
-git clone https://github.com/Pyrestone/jetson-fan-ctl.git
+git clone https://gitee.com/yin-qiyu/jetson-fan-ctl.git
 ```
 
 进入文件夹
@@ -825,6 +825,26 @@ sudo python3 setup.py install
 
 
 
+## 9. darknet框架
+
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124629027.png" alt="image-20220220124629027" style="zoom:50%;" />
+
+<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124638393.png" alt="image-20220220124638393" style="zoom: 33%;" />
+
+
+
+```bash
+# 图片检测
+./darknet detect cfg/yolov4.cfg yolov4.weights data/dog.jpg
+```
+
+
+
+```bash
+# 视频检测
+./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights
+```
+
 
 
 
@@ -904,26 +924,4 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgst
 
 
 
-
-## darknet框架
-
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124629027.png" alt="image-20220220124629027" style="zoom:50%;" />
-
-
-
-<img src="https://gitee.com/yin-qiyu/picbed/raw/master/img/image-20220220124638393.png" alt="image-20220220124638393" style="zoom: 33%;" />
-
-
-
-```bash
-# 图片检测
-./darknet detect cfg/yolov4.cfg yolov4.weights data/dog.jpg
-```
-
-
-
-```bash
-# 视频检测
-./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights
-```
 
