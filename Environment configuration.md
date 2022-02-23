@@ -404,7 +404,9 @@ Sudo jtop
 git clone https://gitee.com/yin-qiyu/jetson-fan-ctl.git
 ```
 
-进入文件夹
+```bash
+cd /jetson-fan-ctl #进入文件夹
+```
 
 ``` bash
 sudo apt install python3-dev
