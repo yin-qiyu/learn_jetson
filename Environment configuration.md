@@ -782,7 +782,7 @@ jupyter notebook password
 运行create_jupyter_service.py文件产生jupyter_service.service文件
 
 ```bash
-pyhon3 create_jupyter_service.py
+python3 create_jupyter_service.py
 ```
 
 然后将产生的该服务文件移动至系统服务
