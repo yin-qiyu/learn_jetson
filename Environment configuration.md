@@ -392,9 +392,12 @@ source ~/.bashrc
 
 ## 3. 查看jetson信息 jtop
 
+```bash
 sudo pip3 install jetson-stats
+sudo jtop
+```
 
-Sudo jtop
+
 
 
 
