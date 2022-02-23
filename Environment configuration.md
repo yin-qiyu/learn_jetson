@@ -44,6 +44,8 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 ## 2. 安装torch和vision
 
+安装好后测试如图：
+
 ![image-20220223224621637](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220223224621637.png)
 
 安装pytorch，首先CUDA的步骤得过一下可以看到nvcc -V
