@@ -1,4 +1,6 @@
-## 目录
+## 
+
+目录
 
 [toc]
 
@@ -43,6 +45,8 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 
 ## 2. 安装torch和vision
+
+[参考资料](https://blog.csdn.net/weixin_43947712/article/details/115530913)
 
 安装好后测试如图：
 
@@ -612,6 +616,8 @@ cd jetson-inference
 git submodule update --init
 ```
 
+> start
+
 一、获取源码
 首先打开终端运行如下代码：
 
@@ -640,17 +646,17 @@ cd jetson-inference/tools
 1）模型下载国内源：
 
 ```bash
-sed -in-place -e 's@https://nvidia.box.com/shared/static@https://bbs.gpuworld.cn/mirror@g' download-models.sh
+$ sed -in-place -e 's@https://nvidia.box.com/shared/static@https://bbs.gpuworld.cn/mirror@g' download-models.sh
 ```
 
 2）pytorch国内源：
 
 ```bash
-sed -in-place -e 's@https://nvidia.box.com/shared/static@https://bbs.gpuworld.cn/mirror@g' install-pytorch.sh 
+$ sed -in-place -e 's@https://nvidia.box.com/shared/static@https://bbs.gpuworld.cn/mirror@g' install-pytorch.sh 
 
-sed -in-place -e 's@https://github.com/pytorch/vision@https://gitee.com/vcan123/pytorch@g' install-pytorch.sh 
+$ sed -in-place -e 's@https://github.com/pytorch/vision@https://gitee.com/vcan123/pytorch@g' install-pytorch.sh 
 
-sed -in-place -e 's@https://github.com/dusty-nv/vision@https://gitee.com/vcan123/dusty-nv@g' install-pytorch.sh
+$ sed -in-place -e 's@https://github.com/dusty-nv/vision@https://gitee.com/vcan123/dusty-nv@g' install-pytorch.sh
 ```
 
 
@@ -834,21 +840,58 @@ sudo python3 setup.py install
 
 ## 9. darknet框架
 
+```bash
+git clone https://github.com/AlexeyAB/darknet.git #下载darknet框架
+```
+
+```bash
+cd darknet
+
+sudo vim Makefile   #修改Makefile
+```
+
+将`Makefile`的前三行修改一下
+
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141647174.png" alt="image-20220222141647174" width="300" />
+
+和如图所示的nvcc位置
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141654527.png" alt="image-20220222141654527" width="500" />
 
+修改好猴按`esc`左下角出现冒号后`wq`保存退出
 
+在darknet路径下编译
 
 ```bash
-# 图片检测
-./darknet detect cfg/yolov4.cfg yolov4.weights data/dog.jpg
+$ make -j4
 ```
 
+编译完成如图
 
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220224143750683.png" alt="image-20220224143750683" width='2000' style="zoom:25%;" />
+
+在命令行下输入  `./darknet`
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220224143905042.png" alt="image-20220224143905042"  style="zoom:50%;" />
+
+在yolo官网下载yolov4和yolov4-tiny的权重文件放入文件夹
 
 ```bash
-# 视频检测
+./darknet detect cfg/yolov4.cfg yolov4.weights data/dog.jpg # 简写版
+
+./darknet detector test cfg/coco.data cfg/yolov4.cfg yolov4.weights data/dog.jpg # 完整版
+
+ 
+
+Yolov4-tiny图片的检测
+
+./darknet detect cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg # 简写版
+
+./darknet detector test cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg # 完整版
+```
+
+```bash
+# 视频检测 仅usb可测试
 ./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights
 ```
 

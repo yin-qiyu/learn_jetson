@@ -99,3 +99,13 @@ pip3 install --upgrade pip
 
 
 
+# 删除opt下的文件
+
+```bash
+rm -rf filename
+```
+
+
+
+
+
