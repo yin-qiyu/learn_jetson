@@ -1,6 +1,4 @@
-## 
-
-目录
+ 目录
 
 [toc]
 
@@ -23,15 +21,21 @@
 jetson nano是原装了CUDA的，但是需要用户导入环境变量（导入相关的路径）才可以使用，**只有环境变量导入成功后**，方可在命令行使用 nvcc -V
 
 ```bash
-sudo vim ~/.bashrc
+sudo vim .bashrc
 ```
 
 在最后添加这三行
 
 ```bash
-export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-export PATH=/usr/local/cuda/bin:$PATH
+#export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+#export #LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+#export PATH=/usr/local/cuda/bin:$PATH
+
+
+export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64\                         
+${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
 ```
 
 ```bash
@@ -40,11 +44,17 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 在命令行输入 nvcc -V 如果正常输出，说明CUDA路径配置成功
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141141880.png" alt="image-20220222141141880" style="zoom:50%;" width="1000"/>
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220225161019891.png" alt="image-20220225161019891" style="zoom:50%;" />
 
 
 
 ##  安装torch和vision（老版本）
+
+新笔记可参考 [此链接](\pytorch和torchvison)
+
+
+
+
 
 [参考资料](https://blog.csdn.net/weixin_43947712/article/details/115530913)
 
@@ -110,7 +120,7 @@ tensor([[0.3380, 0.3845, 0.3217],
 
 **import** torch
 
-torch**.**cuda**.**is_available()
+torch.cuda.is_available()
 
  
 
@@ -171,7 +181,7 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 ```
 
 ```bash
-sudo vim /etc/apt/sources.list.bak
+sudo gedit /etc/apt/sources.list.bak
 ```
 
 ```
@@ -223,7 +233,7 @@ sudo vim pip.conf
 - **源**:
 
 ```
-[global]  
+[global]
 timeout = 6000  
 index-url = http://pypi.doubanio.com/simple/  
 trusted-host = pypi.doubanio.com
@@ -274,8 +284,6 @@ sudo apt-get update
 
 - [官网教程](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048) 
 
-
-
 下载官方提供的torch-1.8.0-cp36-cp36m-linux_aarch64.whl包
 
 - [下载连接](https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl)
@@ -292,6 +300,10 @@ $ cd torchvision
 $ export BUILD_VERSION=0.9.0
 $ python3 setup.py install --user
 ```
+
+- 检查环境
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220223224621637.png" alt="image-20220223224621637" style="zoom:50%;" />
 
 
 
@@ -423,7 +435,7 @@ source ~/.bashrc
 
 
 
-##   查看jetson信息 jtop
+##   查看jetson信息 （jtop）
 
 ```bash
 sudo pip3 install jetson-stats
@@ -528,7 +540,7 @@ sudo gedit /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 
 ```
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141438235.png" alt="image-20220222141438235" width="800" />
+![image-20220225205933008](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220225205933008.png)
 
 - 编译文件
 

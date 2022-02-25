@@ -107,5 +107,7 @@ rm -rf filename
 
 
 
+# apt下载失败
 
+下载过程如果因为网络原因失败的话可以在命令后加上 -i https://pypi.tuna.tsinghua.edu.cn/simple 来使用清华镜像源
 
