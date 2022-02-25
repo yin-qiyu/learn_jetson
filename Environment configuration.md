@@ -44,7 +44,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 
 
-##  安装torch和vision
+##  安装torch和vision（老版本）
 
 [参考资料](https://blog.csdn.net/weixin_43947712/article/details/115530913)
 
@@ -264,6 +264,33 @@ deb https://mirrors.ustc.edu.cn/ubuntu-ports/ bionic-security main restricted un
 
 ```bash
 sudo apt-get update
+```
+
+
+
+
+
+## pytorch和torchvison
+
+- [官网教程](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048) 
+
+
+
+下载官方提供的torch-1.8.0-cp36-cp36m-linux_aarch64.whl包
+
+- [下载连接](https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl)
+
+按照官方教程输入以下命令
+
+```bash
+$ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev
+$ pip3 install Cython
+$ pip3 install numpy torch-1.8.0-cp36-cp36m-linux_aarch64.whl # (按照自己torch1.8.0包的下载路径修改）
+$ sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
+$ git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
+$ cd torchvision
+$ export BUILD_VERSION=0.9.0
+$ python3 setup.py install --user
 ```
 
 
