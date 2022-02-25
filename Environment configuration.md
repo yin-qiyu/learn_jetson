@@ -162,11 +162,9 @@ print(torchvision.__version__)
 
 # jetson nao其他配置
 
+## 更新镜像源
 
-
-## 1. 更新镜像源
-
-### 1.1 apt
+###  apt
 
 ```bash
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -200,7 +198,7 @@ sudo apt-get update 		//更新
 
 
 
-### 1.2 pip
+### pip
 
 ```bash
 sudo apt-get install python3-pip python3-dev
@@ -233,7 +231,7 @@ trusted-host = pypi.doubanio.com
 
 
 
-### 1.3 docker
+###  docker
 
 ```bash
 cat /etc/issue  #查看ubantu版本
@@ -272,16 +270,18 @@ sudo apt-get update
 
 
 
-## 2. miniforge包管理(选)
+##  miniforge包管理(选)
 
-### 2.1 [miniforge简介](https://github.com/conda-forge/miniforge/releases)
+:bangbang:**<font color='red'>此内容为可非必要配置，因为jetson是arm版本无法直接安装anaconda环境，如果需要在jetson上安装anaconda可以接着往下看，若不需要，请跳过</font>**
+
+###  [miniforge简介](https://github.com/conda-forge/miniforge/releases)
 
 conda是一个开源的包、环境管理器，可以用于在同一个机器上安装不同版本的软件包及其依赖，并能够在不同的环境之间切换。搞深度学习的应该都十分熟悉anaconda，但是NVIDIA Jetson Xavier NX是**arm**架构的，anaconda及其精简版miniconda并不支持arm64架构。现在主流的CPU架构分为Intel的x86/x64架构和ARM的ARM/ARM64两种，平常用的电脑大部分都是x86/x64的（苹果除外），Xavier使用的是ARM64，所以很多在x86/x64上能用的的东西到了它这里就不能用了。**这一点请谨记，如果你在Jetson上遇到什么奇奇怪怪的例如“No such file or directory”之类的问题，第一时间要考虑是不是版本不是ARM64的版本**。
 在ARM64上的anaconda替代品是miniforge，miniforge与miniconda的区别在于miniforge的下载通道是conda-forge，其他基本没什么不同。
 
 
 
-### 2.2 安装miniforge
+###  安装miniforge
 
 1. 我下载的是 `Miniforge-pypy3-4.11.0-0-Linux-aarch64.sh`,,代表适用于arrch64架构下的Linux系统。（ARM64对应32位和64位分为arrch32和arrch64）
 
@@ -316,9 +316,9 @@ conda config --set show_channel_urls yes
 
 
 
-### 2.3 安装pytorch
+###  安装pytorch、torchvision
 
-### 2.3.1 安装新的虚拟环境
+###  安装新的虚拟环境
 
 - 这是在minigorge上安装的pytorch，若不想在虚拟环境上安装。可以参考[PyTorch for Jetson - version 1.10 now available - Jetson & Embedded Systems / Jetson Nano - NVIDIA Developer Forums](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048)
 
@@ -349,7 +349,7 @@ conda info -e												#查看已有环境
 
 
 
-### 2.3.2 pytorch1.8
+### pytorch1.8
 
 直接输入命令安装PyTorch，`pip3`是python3的pip，如果没装，就换成`pip`。
 
@@ -390,13 +390,13 @@ source ~/.bashrc
 
 
 
-### 2.3.3 orchvision v0.9.0
+###  orchvision v0.9.0
 
 
 
 
 
-## 3. 查看jetson信息 jtop
+##   查看jetson信息 jtop
 
 ```bash
 sudo pip3 install jetson-stats
@@ -407,7 +407,7 @@ sudo jtop
 
 
 
-## 4. [风扇自动控制](https://github.com/Pyrestone/jetson-fan-ctl.git)
+##  [风扇自动控制](https://github.com/Pyrestone/jetson-fan-ctl.git)
 
 ```bash
 git clone https://gitee.com/yin-qiyu/jetson-fan-ctl.git
@@ -445,7 +445,7 @@ vim /etc/automagic-fan/config.json
 
 
 
-## 5. 增加Swap分区大小
+##  增加Swap分区大小
 
 - 先查看初试交换分区大小：
 
@@ -478,7 +478,7 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 
 
 
-## 6. VNC
+## VNC
 
 - 编辑文件
 
@@ -515,18 +515,20 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 
 设置好后（不设置也可以）
 
+<img src="https://img-blog.csdnimg.cn/20200602124909227.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE4MTM1MA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"  />
+
 - 配置vnc设置
 
 ```bash
-gsettings set org.gnome.Vino prompt-enabled false
-gsettings set org.gnome.Vino require-encryption false
+$ gsettings set org.gnome.Vino prompt-enabled false
+$ gsettings set org.gnome.Vino require-encryption false
 ```
 
 - 设置密码
 
 ```bash
-gsettings set org.gnome.Vino authentication-methods "["vnc"]"
-gsettings set org.gnome.Vino vnc-password $(echo -n "请输入你的密码"|base64)
+$ gsettings set org.gnome.Vino authentication-methods "["vnc"]"
+$ gsettings set org.gnome.Vino vnc-password $(echo -n "请输入你的密码"|base64)
 ```
 
 
@@ -534,9 +536,9 @@ gsettings set org.gnome.Vino vnc-password $(echo -n "请输入你的密码"|base
 - 配置vnc自启
 
 ```bash
-gsettings set org.gnome.Vino enabled true
-mkdir -p ~/.config/autostart
-vi  ~/.config/autostart/vino-server.desktop
+$ gsettings set org.gnome.Vino enabled true
+$ mkdir -p ~/.config/autostart
+$ vi  ~/.config/autostart/vino-server.desktop
 ```
 
 添加下面内容
@@ -556,12 +558,12 @@ NoDisplay=true
 - <font color='red'>重启生效</font>
 
  ```bash
-  sudo reboot　
+ $ sudo reboot　
  ```
 
 
 
-## 7. TensoRT
+##  TensoRT
 
 ### 7.1 TensoRT介绍：
 
@@ -586,7 +588,7 @@ TensorRT是英伟达针对自家平台做的加速包，TensorRT主要做了这�
 
 <img src="https://developer.nvidia.com/sites/default/files/akamai/deeplearning/tensorrt/trt-info.png" alt="img" style="zoom:50%;" />
 
-### 7.2 检查自带TensorRT环境
+### 检查自带TensorRT环境（选）
 
 ```bash
 cd /usr/src/tensorrt/samples  
@@ -600,7 +602,7 @@ sudo make		#编译大约7分钟
 
 <img src="/Users/yinqiyu/Library/Application%20Support/typora-user-images/image-20220222143546381.png" alt="image-20220222143546381" width="300" />
 
-### 7.3 jetson inference库安装
+###  jetson inference库安装（选）
 
 [ 参考资料 ](https://www.bilibili.com/read/cv13998685) 
 
@@ -708,7 +710,7 @@ $ sudo ldconfig
 
 
 
-## 8. 安装jupyter和jetcam
+## 安装jupyter和jetcam
 
 1. **安装nodejs和npm**
 
@@ -838,7 +840,7 @@ sudo python3 setup.py install
 
 
 
-## 9. darknet框架
+## darknet框架（选）
 
 ```bash
 git clone https://github.com/AlexeyAB/darknet.git #下载darknet框架
@@ -899,9 +901,9 @@ Yolov4-tiny图片的检测
 
 
 
-## 9. yolo
+## yolo
 
-### 9.1 Nvidia Jetson Nano 安装 GStreamer
+###  Nvidia Jetson Nano 安装 GStreamer
 
 ```bash
 sudo add-apt-repository universe
