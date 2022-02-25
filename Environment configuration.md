@@ -18,7 +18,7 @@
 
 # 基本环境配置
 
-## 1. 检查nvcc
+## 检查nvcc
 
 jetson nano是原装了CUDA的，但是需要用户导入环境变量（导入相关的路径）才可以使用，**只有环境变量导入成功后**，方可在命令行使用 nvcc -V
 
@@ -44,7 +44,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 
 
 
-## 2. 安装torch和vision
+##  安装torch和vision
 
 [参考资料](https://blog.csdn.net/weixin_43947712/article/details/115530913)
 
