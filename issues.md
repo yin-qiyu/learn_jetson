@@ -1,4 +1,4 @@
-# 1. jupyter import torch 报错
+#  jupyter import torch 报错
 
 ```bash
 OSError:/usr/lib/aarch64-linux-gnu/libgomp.so.1: cannot allocate memory in static TLS block
@@ -64,7 +64,7 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
  
 
-## 2. Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-*解决办法
+#  Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-*解决办法
 
 我在使用pip3 install paramiko 的时候，出现了报错
 
@@ -87,7 +87,7 @@ pip3 install --upgrade pip
 
 
 
-# 2. sd卡烧录太慢
+#  sd卡烧录太慢
 
 换一个好一点的读卡器速度就起来了
 
@@ -110,4 +110,8 @@ rm -rf filename
 # apt下载失败
 
 下载过程如果因为网络原因失败的话可以在命令后加上 -i https://pypi.tuna.tsinghua.edu.cn/simple 来使用清华镜像源
+
+
+
+
 
