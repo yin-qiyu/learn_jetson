@@ -50,7 +50,7 @@ ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 
 
-##  安装torch和vision（老版本、新版在后面有介绍）
+##  安装torch和vision（可忽略）
 
 - [官网](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-9-0-now-available/72048)
 
@@ -284,6 +284,10 @@ sudo apt-get update
 
 - [官网教程](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048) 
 
+- 版本要对应
+
+<img src="https://img2020.cnblogs.com/blog/1733978/202104/1733978-20210414172645876-1962676.png" alt="img" style="zoom: 67%;" width="1000"/>
+
 下载官方提供的torch-1.8.0-cp36-cp36m-linux_aarch64.whl包
 
 - [下载连接](https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl)
@@ -303,7 +307,18 @@ $ python3 setup.py install --user
 
 - 检查环境
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220223224621637.png" alt="image-20220223224621637" style="zoom:50%;" />
+```python
+python3
+import torch
+import torchvision
+print(torch.__version__)
+print(torchvision.__version__)
+torch.cuda.is_available()
+```
+
+
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220226195653355.png" alt="image-20220226195653355" style="zoom:50%;" />
 
 
 
@@ -525,7 +540,7 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 sudo gedit /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 ```
 
-滑到文末添加下段内容格式如图片所示
+- 滑到文末添加下段内容格式如图片所示
 
 ```bash
 <key name="enabled" type="b">
@@ -540,7 +555,7 @@ sudo gedit /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 
 ```
 
-![image-20220225205933008](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220225205933008.png)
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220226204438666.png" alt="image-20220226204438666" style="zoom:50%;" />
 
 - 编译文件
 
@@ -940,7 +955,7 @@ Yolov4-tiny图片的检测
 
 
 
-## yolo
+
 
 ###  Nvidia Jetson Nano 安装 GStreamer
 
