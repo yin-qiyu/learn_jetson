@@ -532,12 +532,12 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 
 
 
-## VNC
+## VNC（虚拟网络控制台）
 
 - 编辑文件
 
 ```bash
-sudo gedit /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
+sudo gedit(/vim) /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 ```
 
 - 滑到文末添加下段内容格式如图片所示
@@ -578,7 +578,7 @@ $ gsettings set org.gnome.Vino prompt-enabled false
 $ gsettings set org.gnome.Vino require-encryption false
 ```
 
-- 设置密码
+- 设置密码（可以不要）
 
 ```bash
 $ gsettings set org.gnome.Vino authentication-methods "["vnc"]"
@@ -617,9 +617,13 @@ NoDisplay=true
 
 
 
+- 电脑端可下载[Download VNC Viewer | VNC® Connect (realvnc.com)](https://www.realvnc.com/en/connect/download/viewer/)
+- <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220226204943881.png" alt="image-20220226204943881" style="zoom:33%;" />
+- 配置jetson nano的ip和密码即可连接
+
 ##  TensoRT
 
-### 7.1 TensoRT介绍：
+### TensoRT介绍：
 
 ​	模型加速越来越成为深度学习工程中的刚需了，最近的CVPR和ICLR会议中，模型的压缩和剪枝是受到的关注越来越多。毕竟工程上，算法工程师的深度学习模型是要在嵌入式平台跑起来，投入应用的。在模型的推理（inference）过程中，计算速度是很重要的。比如自动驾驶，如果使用一个经典的深度学习模型，很容易就跑到200毫秒的延时，那么这意味着，在实际驾驶过程中，你的车一秒钟只能看到5张图像，这当然是很危险的一件事。所以，对于实时响应比较高的任务，模型的加速时很有必要的一件事情了。
 
@@ -901,22 +905,22 @@ git clone https://github.com/AlexeyAB/darknet.git #下载darknet框架
 ```
 
 ```bash
-cd darknet
+$ cd darknet
 
-sudo vim Makefile   #修改Makefile
+$ sudo vim Makefile   #修改Makefile
 ```
 
-将`Makefile`的前三行修改一下
+- 将`Makefile`的前三行修改一下
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141647174.png" alt="image-20220222141647174" width="300" />
 
-和如图所示的nvcc位置
+- 和如图所示的nvcc位置（若前面配置了环境变量则无需这一步操作）
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141654527.png" alt="image-20220222141654527" width="500" />
 
-修改好猴按`esc`左下角出现冒号后`wq`保存退出
+- 修改好猴按`esc`左下角出现冒号后`wq`保存退出
 
-在darknet路径下编译
+- 在darknet路径下编译
 
 ```bash
 $ make -j4
@@ -933,22 +937,53 @@ $ make -j4
 在yolo官网下载yolov4和yolov4-tiny的权重文件放入文件夹
 
 ```bash
+#Yolov4图片的检测
 ./darknet detect cfg/yolov4.cfg yolov4.weights data/dog.jpg # 简写版
 
 ./darknet detector test cfg/coco.data cfg/yolov4.cfg yolov4.weights data/dog.jpg # 完整版
 
  
-
-Yolov4-tiny图片的检测
-
+#Yolov4-tiny图片的检测
 ./darknet detect cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg # 简写版
 
 ./darknet detector test cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg # 完整版
+
+ 
+# 改变检测阈值
+# 默认情况下，YOLO仅显示检测到的置信度为.25或更高的对象。您可以通过将-thresh标志传递给yolo命令来更改此设置。
+
+#例如，要显示所有检测，您可以将阈值设置为0.1：
+./darknet detect cfg/yolov4-tiny.cfg yolov4-tiny.weights data/dog.jpg -thresh 0.1
+
 ```
 
 ```bash
-# 视频检测 仅usb可测试
-./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights
+#Yolov4摄像头实时检测方法：
+./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights /dev/video1
+ 
+#Yolov4-tiny摄像头实时检测方法：
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights /dev/video1
+
+```
+
+
+
+```bash
+#Yolov4视频的检测(github下来的data里面并没有该视频文件，需要用户自行上传要检测的视频文件到data文件夹下)
+./darknet detector demo cfg/coco.data cfg/yolov4.cfg yolov4.weights data/123.mp4
+
+#Yolov4-tiny视频的检测
+#Yolov4-tiny视频的检测(github下来的data里面并没有该视频文件，需要用户自行上传要检测的视频文件到data文件夹下)
+
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights data/xxx.mp4 
+
+```
+
+- 若要调用csi摄像头需要gstream的支持
+
+```bash
+./darknet detector demo cfg/coco.data cfg/yolov4-tiny.cfg yolov4-tiny.weights "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv  ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink"
+
 ```
 
 
@@ -957,7 +992,7 @@ Yolov4-tiny图片的检测
 
 
 
-###  Nvidia Jetson Nano 安装 GStreamer
+#  Nvidia Jetson Nano 安装 GStreamer
 
 ```bash
 sudo add-apt-repository universe
