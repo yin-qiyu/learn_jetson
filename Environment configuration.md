@@ -27,9 +27,11 @@ sudo vim .bashrc
 在最后添加这三行
 
 ```bash
-#export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
-#export #LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-#export PATH=/usr/local/cuda/bin:$PATH
+#选择一个即可
+
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda/bin:$PATH
 
 
 export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}
@@ -48,11 +50,9 @@ ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 
 
-##  安装torch和vision（老版本）
+##  安装torch和vision（老版本、新版在后面有介绍）
 
-新笔记可参考 [此链接](\pytorch和torchvison)
-
-
+- [官网](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-9-0-now-available/72048)
 
 
 
@@ -223,9 +223,9 @@ sudo apt-get install python3-pip python3-dev
 - **pip换源**
 
 ```bash
-sudo mkdir .pip	#创建隐藏文件夹
-ls -a  #查看所有文件
-cd .pip		
+sudo mkdir .pip		#创建隐藏文件夹
+ls -a  						#查看所有文件
+cd .pip						#进入文件夹
 sudo touch pip.conf
 sudo vim pip.conf
 ```
