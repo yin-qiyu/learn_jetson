@@ -115,3 +115,6 @@ rm -rf filename
 
 
 
+# Can't get attribute 'SPPF' on <module 'models.common' from '/home/yqy/workspace/yolov5-5.0/models/common.py'>
+
+[(7条消息) Can‘t get attribute ‘SPPF‘ on ＜module ‘models.common‘ from ‘C:\\Users\\dell\\Desktop\\yolov5-5.0\\mo_RookiChen的博客-CSDN博客](https://blog.csdn.net/RooKichenn/article/details/120866650)
