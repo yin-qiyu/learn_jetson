@@ -87,14 +87,6 @@ pip3 install --upgrade pip
 
 
 
-#  sd卡烧录太慢
-
-换一个好一点的读卡器速度就起来了
-
-
-
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220222141902969.png" alt="image-20220222141902969" width="400" />
-
 
 
 
