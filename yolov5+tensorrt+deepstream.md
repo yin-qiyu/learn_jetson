@@ -200,7 +200,7 @@ cd ..
 LD_PRELOAD=./libmyplugins.so deepstream-app -c deepstream_app_config_yoloV5.txt
 ```
 
-
+![image-20220227180343701](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220227180343701.png)
 
 # 在ds中调用csi or usb摄像头
 
@@ -251,7 +251,7 @@ gpu-id=0
 cudadec-memtype=0
 ```
 
-
+![C2A46195D3579CC5DBF107815D2DB515](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/C2A46195D3579CC5DBF107815D2DB515.jpg)
 
 
 
