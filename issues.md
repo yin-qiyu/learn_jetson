@@ -118,3 +118,19 @@ rm -rf filename
 # 多摄像头无法启动问题
 
 [DeepStream4 Jetson nano 多摄像头问题 - 智能视频分析 / DeepStream SDK - NVIDIA 开发者论坛](https://forums.developer.nvidia.com/t/deepstream4-jetson-nano-multiple-webcams-issue/79030)
+
+
+
+# 部署自己的模型出错
+
+- 报错：
+
+```bash
+ERROR from primary_gie: Failed to create NvDsInferContext instance
+Debug info: /dvs/git/dirty/git-master_linux/deepstream/sdk/src/gst-plugins/gst-nvinfer/gstnvinfer.cpp(809): gst_nvinfer_start (): /GstPipeline:pipeline/GstBin:primary_gie_bin/GstNvInfer:primary_gie:
+Config file path: /home/yqy/workspace/Yolov5-mask-detect-in-Deepstream-5.0-tensorrt7/Deepstream 5.0/config_infer_primary_yoloV5.txt, NvDsInfer Error: NVDSINFER_CONFIG_FAILED
+App run failed
+```
+
+- 解决：
+
