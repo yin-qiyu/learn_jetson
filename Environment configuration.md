@@ -44,7 +44,7 @@ ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 保存后退出，执行 source ~/.bashrc，使得环境变量生效。
 ```
 
-在命令行输入 nvcc -V 如果正常输出，说明CUDA路径配置成功
+在命令行输入 `nvcc -V` 如果正常输出，说明CUDA路径配置成功
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220225161019891.png" alt="image-20220225161019891" style="zoom:50%;" />
 
