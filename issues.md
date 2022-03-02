@@ -134,3 +134,10 @@ App run failed
 
 - 解决：
 
+
+
+
+
+# darknet调用csi
+
+[(7条消息) jetson-nano项目：使用csi摄像头运行yolov3-tiny demo_x16516581的博客-CSDN博客_csi摄像头 jetson nano](https://blog.csdn.net/x16516581/article/details/100570038)
