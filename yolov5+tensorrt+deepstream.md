@@ -88,6 +88,8 @@ sudo ./yolov5 -d ../best.engine ../samples
 
 # 安装测试deepstream
 
+:bangbang:**一定要在官方文档中查看deepstream和jetpack相对应的版本，如Jetpack 4.6 support Deepstream 6.0**
+
 官方文档：[NVIDIA Metropolis Documentation](https://docs.nvidia.com/metropolis/#page/DeepStream_Plugin_Manual/deepstream_plugin_faq.html%23wwpID0EGHA)
 
 官网下载：[DeepStream Getting Started | NVIDIA Developer](https://developer.nvidia.com/deepstream-getting-started)
