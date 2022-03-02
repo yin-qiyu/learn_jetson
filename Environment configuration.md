@@ -181,7 +181,7 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 ```
 
 ```bash
-sudo gedit /etc/apt/sources.list.bak
+sudo vim /etc/apt/sources.list.bak
 ```
 
 ```
@@ -280,7 +280,7 @@ sudo apt-get update
 
 
 
-## pytorch和torchvison
+## 安装pytorch和torchvison
 
 - [官网教程](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048) 
 
@@ -288,11 +288,9 @@ sudo apt-get update
 
 <img src="https://img2020.cnblogs.com/blog/1733978/202104/1733978-20210414172645876-1962676.png" alt="img" style="zoom: 67%;" width="1000"/>
 
-下载官方提供的torch-1.8.0-cp36-cp36m-linux_aarch64.whl包
+- 下载官方提供的[torch-1.8.0-cp36-cp36m-linux_aarch64.whl](https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl)包
 
-- [下载连接](https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl)
-
-按照官方教程输入以下命令
+- 按照官方教程输入以下命令
 
 ```bash
 $ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev
