@@ -618,8 +618,14 @@ NoDisplay=true
 
 
 - 电脑端可下载[Download VNC Viewer | VNC® Connect (realvnc.com)](https://www.realvnc.com/en/connect/download/viewer/)
+
 - <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220226204943881.png" alt="image-20220226204943881" style="zoom:33%;" />
+
 - 配置jetson nano的ip和密码即可连接
+
+- - 遇到下图提示输入电脑账户魔密码即可（是你主机的密码，不是jetson的）
+
+    <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220302182808960.png" alt="image-20220302182808960" style="zoom:50%;" />
 
 ##  TensoRT
 
