@@ -515,7 +515,7 @@ sudo chmod 600 /var/swapfile
 #3）建立交换分区
 sudo mkswap /var/swapfile
 #4）启用交换分区
-
+sudo swapon /var/swapfile
 ```
 
 - 设置为自动启用swapfile
@@ -612,7 +612,7 @@ NoDisplay=true
 - <font color='red'>重启生效</font>
 
  ```bash
- $ sudo reboot　
+ $ sudo reboot
  ```
 
 
