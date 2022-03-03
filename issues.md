@@ -144,10 +144,55 @@ App run failed
 
 
 
+# 存储器扩容
 
+1.打开虚拟机(Ubuntu 18.04)的终端，输入以下命令安装扩容软件
 
+sudo apt install gparted
 
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264666720520-20220303213343533.png) 
+
+2.在虚拟机的系统应用内搜索并打开gparted
+
+<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220228195911196.png" alt="image-20220228195911196" style="zoom:25%;" /> 
+
+3.选择U盘的盘符，切记这几不能选错。例如我这里选择/dev/sdb，可以看到/sdb1后面有一部分是白色和一部分是灰色。
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264672744049-20220303213345080.png) 
+
+4.右键选择Unmount来卸载/dev/sdb1，
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264675462158.png) 
+
+5.右键选择Check检查U盘，点击上面的勾‘√’确认，再点击Apply。
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264678560241-20220228195940915-20220303213346062.png)
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264682834350-20220303213346530.png) 
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264685906494-20220303213347042.png) 
+
+6.选择Resize/Move修改容量大小，直接将右边白色部分拖到最右边，再点击Resize/Move。
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264688738464-20220303213347575.png) 
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264692516357-20220303213348078.png) 
+
+7.点击上面的勾‘√’确认，再点击Apply.
+
+ 
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264695929779-20220303213348562.png) 
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264698567932-20220303213351835.png) 
+
+8.到此U盘扩容完成。
+
+![image.png](https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/1643264702429809-20220303213352507.png) 
 
 # 备份系统
 
 [Clone SD Card – Jetson Nano and Xavier NX – JetsonHacks](https://www.jetsonhacks.com/2020/08/08/clone-sd-card-jetson-nano-and-xavier-nx/)
+
+[为树莓派制作系统镜像时进行瘦身，方便后续保存与批量写入|树莓派|tf卡|fdisk|linux|磁盘_手机网易网 (163.com)](https://3g.163.com/dy/article/GP684MJV0552NFB7.html)
+
