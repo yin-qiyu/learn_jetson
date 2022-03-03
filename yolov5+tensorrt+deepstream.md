@@ -705,11 +705,14 @@ height=720
 
 
 
-# 
+# 参考资料
 
+[Jetson nano部署过程记录：yolov5s+TensorRT+Deepstream检测usb摄像头_sshheennddee123的博客-CSDN博客](https://blog.csdn.net/sshheennddee123/article/details/121060158)
 
+[Jetson nano从烧录系统到DeepStream+TensorRT+yolov5检测CSI摄像头视频 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv11869887)
 
+[Jetson nano上部署自己的Yolov5模型（TensorRT加速）_ailaier的专栏-CSDN博客_jetson nano yolov5](https://blog.csdn.net/ailaier/article/details/116270962)
 
+[Deepstream使用 – OpenJetson](http://openjetson.com/index.php/2020/12/21/deepstream/)
 
-
-
+[rscgg37248/DeepStream6.0_Yolov5-6.0: 基于DeepStream6.0和yolov5-6.0的目标检测 (github.com)](https://github.com/rscgg37248/DeepStream6.0_Yolov5-6.0)
