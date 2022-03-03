@@ -51,6 +51,10 @@ $ git clone -b yolov5-v5.0 https://github.com/wang-xinyu/tensorrtx.git
 
 # jetson上
 
+
+
+
+
 克隆tensorrtx
 
 将生成的.wts放到tensorrtx/yolov5/下
@@ -86,7 +90,7 @@ sudo ./yolov5 -d ../best.engine ../samples
 
 
 
-# 安装测试deepstream
+# 安装测试deepstream（5.0）
 
 :bangbang:**一定要在官方文档中查看deepstream和jetpack相对应的版本，如Jetpack 4.6 support Deepstream 6.0**
 
@@ -165,7 +169,51 @@ deepstream-app -c source8_1080p_dec_infer-resnet_tracker_tiled_display_fp16_nano
 
 
 
+
+
+# 安装ds-6.0
+
+[Quickstart Guide — DeepStream 6.0 Release documentation (nvidia.com)](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html#jetson-setup)
+
+[rscgg37248/DeepStream6.0_Yolov5-6.0: 基于DeepStream6.0和yolov5-6.0的目标检测 (github.com)](https://github.com/rscgg37248/DeepStream6.0_Yolov5-6.0)
+
+- Install
+
+```bash
+$ sudo apt install \
+libssl1.0.0 \
+libgstreamer1.0-0 \
+gstreamer1.0-tools \
+gstreamer1.0-plugins-good \
+gstreamer1.0-plugins-bad \
+gstreamer1.0-plugins-ugly \
+gstreamer1.0-libav \
+libgstrtspserver-1.0-0 \
+libjansson4=2.11-1
+
+$ sudo tar -xvf deepstream_sdk_v6.0.0_jetson.tbz2 -C /
+$ cd /opt/nvidia/deepstream/deepstream-6.0
+$ sudo ./install.sh
+$ sudo ldconfig
+```
+
+- Test
+
+```bash
+$ cd /opt/nvidia/deepstream/deepstream-6.0/samples/configs/deepstream-app/
+
+$ deepstream-app -c source8_1080p_dec_infer-resnet_tracker_tiled_display_fp16_nano.txt
+```
+
+
+
+
+
 # yolov5检测
+
+:bangbang:**Jetson nano的系统版本是4.5.1 TensorRT版本7.x yolov5版本 5.0 pillow需要pip3 uninstall重新pip3 install pillow**
+
+
 
 安装完ds后在/opt/nvidia/deepstream/deepstream-5.0/sources/objectDetector_Yolo会有一个部署yolo的官方实例代码，但只有yolov3的。
 
@@ -261,7 +309,7 @@ cudadec-memtype=0
 
 
 
-## 插件配置
+# 插件配置
 
 参考deepstream_sdk_v4.0.2_jetson/samples/configs/deepstream-app/下的配置文件:
 
@@ -645,7 +693,7 @@ height=720
 
 
 
-
+# 
 
 
 

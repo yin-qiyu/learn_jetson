@@ -295,12 +295,12 @@ sudo apt-get update
 ```bash
 $ sudo apt-get install python3-pip libopenblas-base libopenmpi-dev
 $ pip3 install Cython
-$ pip3 install numpy torch-1.8.0-cp36-cp36m-linux_aarch64.whl # (按照自己torch1.8.0包的下载路径修改）
+$ pip3 install numpy torch-1.8.0-cp36-cp36m-linux_aarch64.whl # (按照自己torch1.8.0包的下载路径修改，此过程较慢）
 $ sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
 $ git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
 $ cd torchvision
 $ export BUILD_VERSION=0.9.0
-$ python3 setup.py install --user
+$ python3 setup.py install --user #时间较长
 ```
 
 - 检查环境
@@ -535,7 +535,7 @@ sudo bash -c 'echo "/var/swapfile swap swap defaults 0 0" >> /etc/fstab'
 - 编辑文件
 
 ```bash
-sudo gedit(/vim) /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
+sudo vim /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
 ```
 
 - 滑到文末添加下段内容格式如图片所示
@@ -550,7 +550,6 @@ sudo gedit(/vim) /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
    </description>
    <default>false</default>
   </key>
-
 ```
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220226204438666.png" alt="image-20220226204438666" style="zoom:50%;" />

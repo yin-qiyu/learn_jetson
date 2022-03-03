@@ -141,3 +141,13 @@ App run failed
 # darknet调用csi
 
 [(7条消息) jetson-nano项目：使用csi摄像头运行yolov3-tiny demo_x16516581的博客-CSDN博客_csi摄像头 jetson nano](https://blog.csdn.net/x16516581/article/details/100570038)
+
+
+
+
+
+
+
+# 备份系统
+
+[Clone SD Card – Jetson Nano and Xavier NX – JetsonHacks](https://www.jetsonhacks.com/2020/08/08/clone-sd-card-jetson-nano-and-xavier-nx/)
