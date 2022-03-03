@@ -51,11 +51,23 @@ $ git clone -b yolov5-v5.0 https://github.com/wang-xinyu/tensorrtx.git
 
 # jetson上
 
+## 搭建yolov5的环境
+
+git clone https://github.com/ultralytics/yolov5.git
+
+python3 -m pip install --upgrade pip
+
+进入yolov5的项目里
+
+pip3 install -r requirements 
+
+若出现pillow相关报错：pillow需要pip3 uninstall重新pip3 install pillow
 
 
 
+## 克隆tensorrtx
 
-克隆tensorrtx
+git clone https://github.com/wang-xinyu/tensorrtx.git
 
 将生成的.wts放到tensorrtx/yolov5/下
 
@@ -171,7 +183,7 @@ deepstream-app -c source8_1080p_dec_infer-resnet_tracker_tiled_display_fp16_nano
 
 
 
-# 安装ds-6.0
+## 安装ds-6.0
 
 [Quickstart Guide — DeepStream 6.0 Release documentation (nvidia.com)](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html#jetson-setup)
 
@@ -209,7 +221,7 @@ $ deepstream-app -c source8_1080p_dec_infer-resnet_tracker_tiled_display_fp16_na
 
 
 
-# yolov5检测
+## yolov5检测
 
 :bangbang:**Jetson nano的系统版本是4.5.1 TensorRT版本7.x yolov5版本 5.0 pillow需要pip3 uninstall重新pip3 install pillow**
 
