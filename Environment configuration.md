@@ -1,7 +1,33 @@
  目录
 
-[toc]
-
+- [基本环境配置](#基本环境配置)
+  - [检查nvcc](#检查nvcc)
+  - [安装torch和vision（可忽略）](#安装torch和vision可忽略)
+- [jetson nao其他配置](#jetson-nao其他配置)
+  - [更新镜像源](#更新镜像源)
+    - [apt](#apt)
+    - [pip](#pip)
+    - [docker](#docker)
+  - [安装pytorch和torchvison](#安装pytorch和torchvison)
+  - [miniforge包管理(选)](#miniforge包管理选)
+    - [miniforge简介](#miniforge简介)
+    - [安装miniforge](#安装miniforge)
+    - [安装pytorch、torchvision](#安装pytorchtorchvision)
+    - [安装新的虚拟环境](#安装新的虚拟环境)
+    - [pytorch1.8](#pytorch18)
+    - [orchvision v0.9.0](#orchvision-v090)
+  - [查看jetson信息 （jtop）](#查看jetson信息-jtop)
+  - [风扇自动控制](#风扇自动控制)
+  - [增加Swap分区大小](#增加swap分区大小)
+  - [VNC（虚拟网络控制台）](#vnc虚拟网络控制台)
+  - [TensoRT](#tensort)
+    - [TensoRT介绍：](#tensort介绍)
+    - [检查自带TensorRT环境（选）](#检查自带tensorrt环境选)
+    - [jetson inference库安装（选）](#jetson-inference库安装选)
+  - [安装jupyter和jetcam](#安装jupyter和jetcam)
+  - [darknet框架（选）](#darknet框架选)
+- [Nvidia Jetson Nano 安装 GStreamer](#nvidia-jetson-nano-安装-gstreamer)
+  - [配置GStreamer管道](#配置gstreamer管道)
 
 
 
