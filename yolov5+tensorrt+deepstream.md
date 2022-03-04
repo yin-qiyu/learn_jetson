@@ -341,6 +341,27 @@ cudadec-memtype=0
 
 ## 视频输入
 
+
+
+默认测试视频
+
+```bash
+[source0]
+enable=1
+#Type - 1=CameraV4L2 2=URI 3=MultiURI
+type=2
+uri=file:/opt/nvidia/deepstream/deepstream-6.0/samples/streams/sample_1080p_h264.mp4
+#uri=file:/home/nvidia/Documents/5-Materials/Videos/0825.avi
+num-sources=1
+gpu-id=0
+# (0): memtype_device   - Memory type Device
+# (1): memtype_pinned   - Memory type Host Pinned
+# (2): memtype_unified  - Memory type Unified
+cudadec-memtype=0
+```
+
+
+
 #### camera
 
 - USB摄像头
