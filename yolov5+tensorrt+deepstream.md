@@ -326,26 +326,57 @@ cudadec-memtype=0
 参考deepstream_sdk_v4.0.2_jetson/samples/configs/deepstream-app/下的配置文件:
 
 - source30_1080p_resnet_dec_infer_tiled_display_int8.txt：演示具有主要推理功能的30个流解码。（仅适用于dGPU和Jetson AGX Xavier平台。）
+
 - source4_1080p_resnet_dec_infer_tiled_display_int8.txt：演示具有主要推理，对象跟踪和三个不同辅助分类器的四个流解码。（仅适用于dGPU和Jetson AGX Xavier平台。）
+
 - source4_1080p_resnet_dec_infer_tracker_sgie_tiled_display_int8_gpu1.txt：在GPU 1上针对主要推理，对象跟踪和三个不同的二级分类器演示四个流解码（对于具有多个GPU卡的系统）。仅适用于dGPU平台。
+
 - config_infer_primary.txt：将 nvinfer元素配置为主要检测器。
+
 - config_infer_secondary_carcolor.txt， config_infer_secondary_carmake.txt， config_infer_secondary_vehicletypes.txt：将 nvinfer元素配置为辅助分类器。
+
 - iou_config.txt：配置一个低级的IOU（联合路口）跟踪器。
+
 - source1_usb_dec_infer_resnet_int8.txt：演示一台USB摄像机作为输入。
+
 - source1_csi_dec_infer_resnet_int8.txt：演示一个CSI摄像机作为输入；仅限于Jetson。
+
 - source2_csi_usb_dec_infer_resnet_int8.txt：演示一台CSI摄像机和一台USB摄像机作为输入；仅限于Jetson。
+
 - source6_csi_dec_infer_resnet_int8.txt：演示六个CSI摄像机作为输入；仅限于Jetson。
+
 - source8_1080p_dec_infer-resnet_tracker_tiled_display_fp16_nano.txt：演示8解码+推断+跟踪器；仅适用于Jetson Nano。
+
 - source8_1080p_dec_infer-resnet_tracker_tiled_display_fp16_tx1.txt：演示8解码+推断+跟踪器；仅适用于Jetson TX1。
+
 - source12_1080p_dec_infer-resnet_tracker_tiled_display_fp16_tx2.txt：演示12个解码+推断+跟踪器；仅适用于Jetson TX2。
+
+  
 
 ## 视频输入
 
-
-
-默认测试视频
+- 默认测试视频
 
 ```bash
+[application]
+enable-perf-measurement=1
+perf-measurement-interval-sec=5
+#gie-kitti-output-dir=streamscl
+
+[tiled-display]
+enable=0
+rows=1
+columns=1
+width=1280
+height=720
+gpu-id=0
+#(0): nvbuf-mem-default - Default memory allocated, specific to particular platform
+#(1): nvbuf-mem-cuda-pinned - Allocate Pinned/Host cuda memory, applicable for Tesla
+#(2): nvbuf-mem-cuda-device - Allocate Device cuda memory, applicable for Tesla
+#(3): nvbuf-mem-cuda-unified - Allocate Unified cuda memory, applicable for Tesla
+#(4): nvbuf-mem-surface-array - Allocate Surface Array memory, applicable for Jetson
+nvbuf-memory-type=0
+
 [source0]
 enable=1
 #Type - 1=CameraV4L2 2=URI 3=MultiURI
@@ -358,6 +389,80 @@ gpu-id=0
 # (1): memtype_pinned   - Memory type Host Pinned
 # (2): memtype_unified  - Memory type Unified
 cudadec-memtype=0
+
+
+[sink0]
+enable=1
+#Type - 1=FakeSink 2=EglSink 3=File
+type=2
+sync=0
+source-id=0
+gpu-id=0
+nvbuf-memory-type=0
+#1=mp4 2=mkv
+container=1
+#1=h264 2=h265
+codec=1
+output-file=yolov4.mp4
+
+[osd]
+enable=1
+gpu-id=0
+border-width=1
+text-size=12
+text-color=1;1;1;1;
+text-bg-color=0.3;0.3;0.3;1
+font=Serif
+show-clock=0
+clock-x-offset=800
+clock-y-offset=820
+clock-text-size=12
+clock-color=1;0;0;0
+nvbuf-memory-type=0
+
+[streammux]
+gpu-id=0
+##Boolean property to inform muxer that sources are live
+live-source=0
+batch-size=4
+##time out in usec, to wait after the first buffer is available
+##to push the batch even if the complete batch is not formed
+batched-push-timeout=40000
+## Set muxer output width and height
+width=1280
+height=720
+##Enable to maintain aspect ratio wrt source, and allow black borders, works
+##along with width, height properties
+enable-padding=0
+nvbuf-memory-type=0
+
+# config-file property is mandatory for any gie section.
+# Other properties are optional and if set will override the properties set in
+# the infer config file.
+[primary-gie]
+enable=1
+gpu-id=0
+model-engine-file=yolov5s.engine
+labelfile-path=labels.txt
+#batch-size=1
+#Required by the app for OSD, not a plugin property
+bbox-border-color0=1;0;0;1
+bbox-border-color1=0;1;1;1
+bbox-border-color2=0;0;1;1
+bbox-border-color3=0;1;0;1
+interval=0
+gie-unique-id=1
+nvbuf-memory-type=0
+config-file=config_infer_primary_yoloV5.txt
+
+[tracker]
+enable=0
+tracker-width=512
+tracker-height=320
+ll-lib-file=/opt/nvidia/deepstream/deepstream-5.0/lib/libnvds_mot_klt.so
+
+[tests]
+file-loop=0
 ```
 
 
@@ -722,7 +827,9 @@ height=720
 
 
 
+# 部署自己的模型
 
+[Custom YOLO Model in the DeepStream YOLO App](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_custom_YOLO.html)
 
 
 
