@@ -113,6 +113,16 @@ rm -rf filename
 
 
 
+# vnc分辨率设置
+
+[jetson nano 分辨率](https://blog.csdn.net/xiangfengbingzhi/article/details/119703356?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.pc_relevant_paycolumn_v3&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
+
+应用程序->启动应用程序中添加启动应用程序
+
+名称随意
+
+xrandr --fb 1024x600
+
 
 
 # 多摄像头无法启动问题
