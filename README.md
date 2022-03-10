@@ -8,7 +8,7 @@
 
 
 
-1. Jetson nano environment configuration and model deployment
+1. Jetson nano 环境配置+模型部署
 
 2. jetson nano环境搭建+yolov5+tensorrt+deepstream
 
