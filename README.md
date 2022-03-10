@@ -1,7 +1,10 @@
 # learn_jetson
+
 <div id="top"></div>
 
 🚀🚀🚀**此仓库为jetson nano环境配置+模型加速部署的笔记**🚀🚀🚀
+
+​                      **如果觉得对你有帮助 ⭐️欢迎star⭐️**
 
 
 
@@ -26,3 +29,4 @@
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220227180343701.png" alt="image-20220227180343701" width="700" />
 
 <img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/C2A46195D3579CC5DBF107815D2DB515.jpg" alt="C2A46195D3579CC5DBF107815D2DB515" width="700" />
+
