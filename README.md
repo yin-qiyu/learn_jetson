@@ -9,7 +9,6 @@
 1. [Jetson nano 环境配置+模型部署](https://github.com/yin-qiyu/learn_jetson/blob/master/1.Environment%20configuration.md)
 2. [jetson nano环境搭建+yolov5+tensorrt+deepstream](https://github.com/yin-qiyu/learn_jetson/blob/master/2.%20yolov5%2Btensorrt%2Bdeepstream.md)
 2. [mask detection](https://github.com/yin-qiyu/learn_jetson/blob/master/3.%E5%8F%A3%E7%BD%A9%E6%A3%80%E6%B5%8Bdemo.md)
-2. [jetson 部署 mmdetection]()
 
 - 经过测试转成tensorrt后推理速度大幅加快
 
