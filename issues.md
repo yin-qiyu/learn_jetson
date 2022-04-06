@@ -215,3 +215,11 @@ sudo apt install gparted
 # darknet调用csi绿屏
 
 [解决Jetson Nano使用CSI摄像头在Darknet下实时检测绿屏_/*wywy*/的博客-CSDN博客](https://blog.csdn.net/qq_44360908/article/details/122777848)
+
+
+
+
+
+# 海康摄像头花屏
+
+改udp连接
