@@ -1,3 +1,22 @@
+目录
+
+- [jupyter import torch 报错](#jupyter-import-torch-报错)
+- [failed with error code 1 in /tmp/pip-build-*](#failed-with-error-code-1-in-tmppip-build-)
+- [删除opt下的文件](#删除opt下的文件)
+- [apt下载失败](#apt下载失败)
+- ['SPPF'问题](#sppf问题)
+- [vnc分辨率设置](#vnc分辨率设置)
+- [多摄像头无法启动问题](#多摄像头无法启动问题)
+- [部署自己的模型出错](#部署自己的模型出错)
+- [darknet调用csi](#darknet调用csi)
+- [存储器扩容](#存储器扩容)
+- [备份系统](#备份系统)
+- [darknet调用csi绿屏](#darknet调用csi绿屏)
+- [海康摄像头花屏](#海康摄像头花屏)
+
+
+
+
 #  jupyter import torch 报错
 
 ```bash
