@@ -15,19 +15,19 @@
 > - 转换成tensorrt后的单张推理速度在70ms左右
 > - nano模型推理速度更是能到30ms左右
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220310143041733.png" alt="image-20220310143041733" width="500"  />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220310143041733.png" alt="image-20220310143041733" width="500"  />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220310143135601.png" alt="image-20220310143135601" width="500" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220310143135601.png" alt="image-20220310143135601" width="500" />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220405210138122.png" alt="image-20220405210138122" width="200" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220405210138122.png" alt="image-20220405210138122" width="200" />
 
 
 
 - csi摄像头推理速度在25帧左右
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/CE28BCCF64EA67A5B0B092D36EBB79B2.jpg" alt="CE28BCCF64EA67A5B0B092D36EBB79B2" width="500"  />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/CE28BCCF64EA67A5B0B092D36EBB79B2.jpg" alt="CE28BCCF64EA67A5B0B092D36EBB79B2" width="500"  />
 
-<img src="https://raw.githubusercontent.com/yin-qiyu/picbed/master/img/image-20220227180343701.png" alt="image-20220227180343701" width="700" />
+<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220227180343701.png" alt="image-20220227180343701" width="700" />
 
 
 
