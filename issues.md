@@ -1,7 +1,7 @@
 目录
 
 - [jupyter import torch 报错](#jupyter-import-torch-报错)
-- [failed with error code 1 in /tmp/pip-build-*](#failed-with-error-code-1-in-tmppip-build-)
+- [failed with error code 1 in /tmp/pip-build-\*](#failed-with-error-code-1-in-tmppip-build-)
 - [删除opt下的文件](#删除opt下的文件)
 - [apt下载失败](#apt下载失败)
 - ['SPPF'问题](#sppf问题)
@@ -36,7 +36,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 根据中外网友的反映，方案1，2都可能有效，但在笔者的测试过程中，只有方案2有效，且每次启动jupyter前都要运行一遍，十分的麻烦。但好在笔者注意到了官方人员的一个回复：
 
-![image-20220222141839089](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220222141839089.png )
+![image-20220222141839089](assets/image-20220222141839089.png )
 
 
 
@@ -52,7 +52,7 @@ export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 
 
-<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220222141848364.png" alt="image-20220222141848364" width="800" />
+<img src="assets/image-20220222141848364.png" alt="image-20220222141848364" width="800" />
 
 
 
@@ -68,7 +68,7 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 测试一下：
 
-<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220222141854183.png" alt="image-20220222141854183" width="800"/>
+<img src="assets/image-20220222141854183.png" alt="image-20220222141854183" width="800"/>
 
 
 
@@ -80,7 +80,7 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 
 
 
- 
+
 
 #  failed with error code 1 in /tmp/pip-build-*
 
@@ -90,9 +90,9 @@ Environment="LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1"
 ...
         raise DistutilsError("Setup script exited with %s" % (v.args[0],))
     distutils.errors.DistutilsError: Setup script exited with error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
-    
+
     ----------------------------------------
-Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-23ykqx51/pynacl/ 
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-23ykqx51/pynacl/
 ```
 
 百度了好久也试了前人的很多方法，最后终于找到了答案。
@@ -141,7 +141,7 @@ rm -rf filename
 
 xrandr --fb 1024x600
 
-<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220307130253917.png" alt="image-20220307130253917" width="600" />
+<img src="assets/image-20220307130253917.png" alt="image-20220307130253917" width="600" />
 
 # 多摄像头无法启动问题
 
@@ -178,45 +178,45 @@ App run failed
 
 sudo apt install gparted
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264666720520-20220303213343533.png) 
+![image.png](assets/1643264666720520-20220303213343533.png)
 
 2.在虚拟机的系统应用内搜索并打开gparted
 
-<img src="https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220228195911196.png" alt="image-20220228195911196" style="zoom:25%;" /> 
+<img src="assets/image-20220228195911196.png" alt="image-20220228195911196" style="zoom:25%;" />
 
 3.选择U盘的盘符，切记这几不能选错。例如我这里选择/dev/sdb，可以看到/sdb1后面有一部分是白色和一部分是灰色。
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264672744049-20220303213345080.png) 
+![image.png](assets/1643264672744049-20220303213345080.png)
 
 4.右键选择Unmount来卸载/dev/sdb1，
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264675462158.png) 
+![image.png](assets/1643264675462158.png)
 
 5.右键选择Check检查U盘，点击上面的勾‘√’确认，再点击Apply。
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264678560241-20220228195940915-20220303213346062.png)
+![image.png](assets/1643264678560241-20220228195940915-20220303213346062.png)
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264682834350-20220303213346530.png) 
+![image.png](assets/1643264682834350-20220303213346530.png)
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264685906494-20220303213347042.png) 
+![image.png](assets/1643264685906494-20220303213347042.png)
 
 6.选择Resize/Move修改容量大小，直接将右边白色部分拖到最右边，再点击Resize/Move。
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264688738464-20220303213347575.png) 
+![image.png](assets/1643264688738464-20220303213347575.png)
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264692516357-20220303213348078.png) 
+![image.png](assets/1643264692516357-20220303213348078.png)
 
 7.点击上面的勾‘√’确认，再点击Apply.
 
- 
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264695929779-20220303213348562.png) 
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264698567932-20220303213351835.png) 
+![image.png](assets/1643264695929779-20220303213348562.png)
+
+![image.png](assets/1643264698567932-20220303213351835.png)
 
 8.到此U盘扩容完成。
 
-![image.png](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/1643264702429809-20220303213352507.png) 
+![image.png](assets/1643264702429809-20220303213352507.png)
 
 # 备份系统
 

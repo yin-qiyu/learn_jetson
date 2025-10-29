@@ -30,7 +30,7 @@ docker rmi $(docker images -q)
 
 **3、当要删除的iamges和其他的镜像有关联而无法删除时**
 
-![image-20220222141800776](https://yqypicbed.oss-cn-hangzhou.aliyuncs.com/typoraoss/image-20220222141800776.png)
+![image-20220222141800776](assets/image-20220222141800776.png)
 
 可通过 -f 参数强制删除
 
